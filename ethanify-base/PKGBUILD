@@ -63,6 +63,7 @@ depends=(
   'pass-git'
   'pass-otp'
   'pass-update'
+  'pkgconf'
   'qrencode'
   'ripgrep'
   'solaar'
