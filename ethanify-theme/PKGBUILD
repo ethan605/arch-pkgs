@@ -1,12 +1,15 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
-pkgname=ethanify-fonts
+pkgname=ethanify-theme
 pkgver=1.0.0
 pkgrel=1
-pkgdesc="Fonts collection for ethanify systems"
+pkgdesc="Theme configuration for ethanify systems"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
+  'breeze-gtk'
+  'breeze-icons'
+  'breeze-snow-cursor-theme'
   'noto-fonts-cjk'
   'noto-fonts-emoji'
   'otf-latin-modern'
