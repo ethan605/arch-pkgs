@@ -9,6 +9,7 @@ license=('MIT')
 depends=(
   'deno'
   'docker'
+  'google-chrome'
   'httpie'
   'openvpn'
   'postman-bin'

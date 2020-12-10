@@ -8,7 +8,7 @@ url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
   'dropbox'
-  'google-chrome'
+  'expressvpn'
   'megasync'
   'mpc'
   'mpd'
