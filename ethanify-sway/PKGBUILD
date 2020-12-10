@@ -1,0 +1,23 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=ethanify-sway
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Base system configuration for ethanify systems"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+depends=(
+  'dex'
+  'grim'
+  'imv'
+  'mako'
+  'slurp'
+  'sway'
+  'swayidle'
+  'swaylock-effects-git'
+  'waybar'
+  'wl-clipboard'
+  'wofi'
+  'xorg-server-xwayland'
+)
+
