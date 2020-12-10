@@ -1,0 +1,20 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=ethanify-base
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Base system configuration for ethanify systems"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+depends=(
+  noto-fonts-cjk
+  noto-fonts-emoji
+  otf-latin-modern
+  otf-latinmodern-math
+  otf-stix
+  ttf-hannom
+  ttf-indic-otf
+  ttf-khmer
+  ttf-tibetan-machine
+)
+
