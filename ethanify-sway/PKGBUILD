@@ -2,7 +2,7 @@
 pkgname=ethanify-sway
 pkgver=1.0.0
 pkgrel=1
-pkgdesc="Base system configuration for ethanify systems"
+pkgdesc="Sway configuration for ethanify systems"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
