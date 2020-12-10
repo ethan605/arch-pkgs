@@ -1,0 +1,76 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=ethanify-base
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Base system configuration for ethanify systems"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+depends=(
+  # Dependencies from base
+  'bash'
+  'bzip2'
+  'coreutils'
+  'file'
+  'filesystem'
+  'findutils'
+  'gawk'
+  'gcc-libs'
+  'gettext'
+  'glibc'
+  'grep'
+  'gzip'
+  'iproute2'
+  'iputils'
+  'licenses'
+  'pacman'
+  'pciutils'
+  'procps-ng'
+  'psmisc'
+  'sed'
+  'shadow'
+  'systemd'
+  'systemd-sysvcompat'
+  'tar'
+  'util-linux'
+  'xz'
+  # Linux kernels & boot
+  'efibootmgr'
+  'grub'
+  'linux'
+  'linux-firmware'
+  'linux-lts'
+  # Basic tools
+  'axel'
+  'bat'
+  'blueman'
+  'bluez'
+  'bluez-utils'
+  'chezmoi'
+  'firefox'
+  'fzf'
+  'git'
+  'htop'
+  'jq'
+  'keychain'
+  'man-db'
+  'neofetch'
+  'neovim'
+  'networkmanager'
+  'openssh'
+  'pass-git'
+  'pass-otp'
+  'pass-update'
+  'qrencode'
+  'ripgrep'
+  'sudo'
+  'termite'
+  'usbutils'
+  'vifm'
+  'yay'
+  'zip'
+  'zsh'
+  'zsh-autosuggestions'
+  'zsh-fast-syntax-highlighting'
+)
+
