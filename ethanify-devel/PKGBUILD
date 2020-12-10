@@ -1,0 +1,22 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=ethanify-base
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Base system configuration for ethanify systems"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+depends=(
+  'deno'
+  'docker'
+  'httpie'
+  'openvpn'
+  'postman-bin'
+  'pyenv'
+  'rvm'
+  'slack-desktop'
+  'virtualbox'
+  'virtualbox-guest-iso'
+  'virtualbox-host-modules-arch'
+)
+
