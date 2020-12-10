@@ -55,6 +55,7 @@ depends=(
   'htop'
   'jq'
   'keychain'
+  'make'
   'man-db'
   'neofetch'
   'neovim'
