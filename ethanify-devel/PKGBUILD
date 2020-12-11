@@ -7,9 +7,25 @@ arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
+  # Dependencies from base-devel
+  'autoconf'
+  'automake'
+  'binutils'
+  'bison'
+  'fakeroot'
+  'flex'
+  'gcc'
+  'm4'
+  'make'
+  'patch'
+  'pkgconf'
+  'sudo'
+  'texinfo'
+  'which'
+
+  # Custom dependencies
   'deno'
   'docker'
-  'google-chrome'
   'httpie'
   'openvpn'
   'postman-bin'

@@ -15,12 +15,14 @@ depends=(
   'dropbox'
   'expressvpn'
   'firefox'
+  'google-chrome'
+  'ibus-bamboo-git'
   'megasync'
   'mpc'
   'mpd'
   'mpv'
   'ncmpcpp'
-  'networkmanager'
+  'net-tools'
   'pass-git'
   'pass-otp'
   'pass-update'
@@ -29,5 +31,6 @@ depends=(
   'solaar'
   'telegram-desktop'
   'timidity++'
+  'zoom'
 )
 
