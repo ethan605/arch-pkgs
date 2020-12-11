@@ -19,5 +19,8 @@ depends=(
   'ttf-indic-otf'
   'ttf-khmer'
   'ttf-tibetan-machine'
+
+  # Custom fonts
+  'ttf-haskplex-nerd'
 )
 
