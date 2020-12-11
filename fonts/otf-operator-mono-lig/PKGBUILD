@@ -7,8 +7,8 @@ arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 _fontserver="https://github.com/ethan605/arch-pkgs"
-_fontver="788a465a4574017c90dca6e7690b228d8ec4e540"
-_fontpath="fonts/otf-operator-mono-lig/src"
+_fontver="01a2543c36c330dc2b4d7dae54b0e5bdf9820b24"
+_fontpath="fonts/otf-operator-mono-lig/fonts"
 
 source=(
   "OperatorMono-BoldItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-BoldItalic.otf"
