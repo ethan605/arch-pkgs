@@ -1,5 +1,7 @@
+*.otf
 *.pkg.tar.*
 *.tar.gz
+*.ttf
 /**/pkg/
 /**/src/
 !/**/PKGBUILD
