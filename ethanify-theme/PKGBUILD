@@ -21,6 +21,7 @@ depends=(
   'ttf-tibetan-machine'
 
   # Custom fonts
+  'otf-operator-mono-lig'
   'ttf-haskplex-nerd'
 )
 
