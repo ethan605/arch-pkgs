@@ -7,7 +7,7 @@ arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 _fontserver="https://github.com/ethan605/arch-pkgs"
-_fontver="1168c2fae8f8852a0d3e8afbe2fafee5ec1d2434"
+_fontver="788a465a4574017c90dca6e7690b228d8ec4e540"
 _fontpath="fonts/otf-operator-mono-lig/src"
 
 source=(
