@@ -34,12 +34,14 @@ depends=(
   'tar'
   'util-linux'
   'xz'
+
   # Linux kernels & boot
   'efibootmgr'
   'grub'
   'linux'
   'linux-firmware'
   'linux-lts'
+
   # Basic tools
   'axel'
   'bat'
