@@ -1,0 +1,41 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=otf-operator-mono
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Original Operator Mono font"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+_fontserver="https://github.com/ethan605/arch-pkgs"
+_fontver="01a2543c36c330dc2b4d7dae54b0e5bdf9820b24"
+_fontpath="fonts/otf-operator-mono/fonts"
+
+source=(
+  "OperatorMono-BoldItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-BoldItalic.otf"
+  "OperatorMono-Bold.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-Bold.otf"
+  "OperatorMono-BookItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-BookItalic.otf"
+  "OperatorMono-Book.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-Book.otf"
+  "OperatorMono-LightItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-LightItalic.otf"
+  "OperatorMono-Light.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-Light.otf"
+  "OperatorMono-MediumItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-MediumItalic.otf"
+  "OperatorMono-Medium.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-Medium.otf"
+  "OperatorMono-XLightItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-XLightItalic.otf"
+  "OperatorMono-XLight.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-XLight.otf"
+)
+
+sha512sums=(
+  "590075950536810a3137e69e87ed69b8ff79a19c665ebb4ae447099aafcdded6ee096888dd09e5f5da4c739e21f85b54b6ab7510215ae56b80f3a036e07b334c"
+  "f285fb78ee9bbe059a997307f1e95c0b46e7eb9725e46c4abef033dd49c79bc47b070bec855be1a73f1403118206f3b9c4407bfd9daf656220699cf4ebae5529"
+  "d18aca479b9ed5da7ecc083d833264b246a12cdc8291c2a47be44fd52333d3e862ba47c45aa386da636210f4501340d77e18733b7807879dd914a1e1703db0c3"
+  "28d16c142f5b9e2fc565f889cd475f66389e8dcf28c2d683f86153ca7059fb6be684bc74b1570e42fe1e81fc4eb8ea211b9460dfcd62824c332ad6593f7ddb2d"
+  "307d13f60a7505ad1149d801c3b1f1c7ac92e6363e95d58f7a7d65aa5bdeed355c21da7b1ba4ae2bcb81e6cf5c5d5e4eec48c46f97daa85e6b47402ef997f26d"
+  "6989b7a19c9fc40751cbc206fa5391578d7d40421b7953feeea170a138d6ba569ac99d900fb4badae5d2ee14d778704a404c3bd0001208258e6203e1d16d28c2"
+  "b0bc28c9bfe0c2dd8ff209d1af8590b18839ae3b78b2a382e9db2b78ffbdf389c5d003ca75b50c1340da907b83c7dd107751f2880f885a0c2c7ea38e2cc6413b"
+  "48290a0c77d00071a498bcad23ec06cda0d5bbd72ad045b304335a5fda48792fd385d02dfce3969cebf5c77d68abf70bb588cdeeffc389487baf41553351fb3e"
+  "c88be6e76badf36133d3eb28349f75e5a04607aac382eb29904cb4055d72c03be0dc3057129693acd90444f4c860b01482f470381300205e75d6d32118034dff"
+  "8e1c1a8559f6087b912373103f0e5edda3f682fb5c93874d43f9aa824d1647c2b8eb03e48bfe30f1c786752d0192255abb7c1d7e7215d9ea934e6ccfa1f005ad"
+)
+
+package() {
+  install -Dm644 -t "$pkgdir/usr/share/fonts/OTF" *.otf
+}
