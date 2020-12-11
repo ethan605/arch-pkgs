@@ -1,0 +1,16 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=ttf-samsung-sans
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="A sans-serif font by Samsung"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+_fontserver="https://www.cufonfonts.com"
+_fontver=4
+source=("${_fontserver}/download/font/samsung-sans-${_fontver}")
+sha512sums=('72baf27f7ac37808ce17e52497e971f188187ecf50442a0a863f0fd1725b25dd5c89a8abc469bc97f0270861e4392d435d19c9bcc5568584f2ff95079061bb16')
+
+package() {
+  install -Dm644 -t "$pkgdir/usr/share/fonts/TTF" *.ttf
+}

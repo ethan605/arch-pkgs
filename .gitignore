@@ -1,7 +1,5 @@
-*.pkg.tar.xz
+*.pkg.tar.*
 *.tar.gz
-/pkg/**/pkg/
-/pkg/**/src/
-repo/
-*.log
-/root/
+/**/pkg/
+/**/src/
+!/**/PKGBUILD
