@@ -1,20 +1,17 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=otf-operator-mono-lig
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A patched Operator Mono font with"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
-_fontserver="https://github.com/ethan605/arch-pkgs"
-_fontver="383fc65be9edf510f60b33bedd904a0daa2f55d7"
-_fontpath="fonts/otf-operator-mono-lig/fonts"
 
 source=(
-  "OperatorMonoLig-BookItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMonoLig-BookItalic.otf"
-  "OperatorMonoLig-Book.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMonoLig-Book.otf"
-  "OperatorMonoLig-MediumItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMonoLig-MediumItalic.otf"
-  "OperatorMonoLig-Medium.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMonoLig-Medium.otf"
+  "OperatorMonoLig-BookItalic.otf"
+  "OperatorMonoLig-Book.otf"
+  "OperatorMonoLig-MediumItalic.otf"
+  "OperatorMonoLig-Medium.otf"
 )
 
 sha512sums=(

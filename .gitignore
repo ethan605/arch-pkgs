@@ -5,4 +5,4 @@
 /**/pkg/
 /**/src/
 !/**/PKGBUILD
-!/fonts/otf-operator-mono*/fonts/*.otf
+!/fonts/otf-operator-mono*/*.otf

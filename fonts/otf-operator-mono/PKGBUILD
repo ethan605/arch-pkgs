@@ -1,26 +1,23 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=otf-operator-mono
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Original Operator Mono font"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
-_fontserver="https://github.com/ethan605/arch-pkgs"
-_fontver="383fc65be9edf510f60b33bedd904a0daa2f55d7"
-_fontpath="fonts/otf-operator-mono/fonts"
 
 source=(
-  "OperatorMono-BoldItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-BoldItalic.otf"
-  "OperatorMono-Bold.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-Bold.otf"
-  "OperatorMono-BookItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-BookItalic.otf"
-  "OperatorMono-Book.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-Book.otf"
-  "OperatorMono-LightItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-LightItalic.otf"
-  "OperatorMono-Light.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-Light.otf"
-  "OperatorMono-MediumItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-MediumItalic.otf"
-  "OperatorMono-Medium.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-Medium.otf"
-  "OperatorMono-XLightItalic.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-XLightItalic.otf"
-  "OperatorMono-XLight.otf::${_fontserver}/raw/${_fontver}/${_fontpath}/OperatorMono-XLight.otf"
+  "OperatorMono-BoldItalic.otf"
+  "OperatorMono-Bold.otf"
+  "OperatorMono-BookItalic.otf"
+  "OperatorMono-Book.otf"
+  "OperatorMono-LightItalic.otf"
+  "OperatorMono-Light.otf"
+  "OperatorMono-MediumItalic.otf"
+  "OperatorMono-Medium.otf"
+  "OperatorMono-XLightItalic.otf"
+  "OperatorMono-XLight.otf"
 )
 
 sha512sums=(
