@@ -7,40 +7,14 @@ arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
-  # Dependencies from base
-  'bash'
-  'bzip2'
-  'coreutils'
-  'file'
-  'filesystem'
-  'findutils'
-  'gawk'
-  'gcc-libs'
-  'gettext'
-  'glibc'
-  'grep'
-  'gzip'
-  'iproute2'
-  'iputils'
-  'licenses'
-  'pacman'
-  'pciutils'
-  'procps-ng'
-  'psmisc'
-  'sed'
-  'shadow'
-  'systemd'
-  'systemd-sysvcompat'
-  'tar'
-  'util-linux'
-  'xz'
-
-  # Linux kernels & boot
-  'efibootmgr'
-  'grub'
-  'linux'
-  'linux-firmware'
-  'linux-lts'
+  # Dependencies from installation process
+  # 'base'
+  # 'efibootmgr'
+  # 'grub'
+  # 'linux'
+  # 'linux-firmware'
+  # 'linux-lts'
+  # 'linux-lts-headers'
 
   # Basic tools
   'axel'
@@ -55,6 +29,9 @@ depends=(
   'neovim'
   'networkmanager'
   'openssh'
+  'pass-git'
+  'pass-otp'
+  'pass-update'
   'qrencode'
   'ripgrep'
   'termite'
