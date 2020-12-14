@@ -1,0 +1,29 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=qrgpg
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Encode/decode ASCII armoured file to/from QRCode images"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+depends=(
+  'imagemagick'
+  'qrencode'
+  'zbar'
+)
+_host="https://gist.githubusercontent.com/ethan605/"
+_gistid="b6888f3c0e12e4f8168baf97f2164750"
+_version="a600d14bac274bc0ec02f04972b742690daaad82"
+_bin="qrgpg"
+
+source=(
+  "${_bin}::${_host}/${_gistid}/raw/${_version}/qrgpg.sh"
+)
+
+sha512sums=(
+  "6db92550fd370be064e4b9198a3d57c64be4119fd34d7c4fbc66e33ab4c10a75dbf06b492809c5776d100ae93205104a69a7138d5a91f1baa8889d49833464bc"
+)
+
+package() {
+  install -Dm755 -t "$pkgdir/usr/bin" "${_bin}"
+}
