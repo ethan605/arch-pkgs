@@ -34,6 +34,6 @@ depends=(
   'slack-desktop'
   'virtualbox'
   'virtualbox-guest-iso'
-  'virtualbox-host-modules-arch'
+  'virtualbox-host-dkms'
 )
 

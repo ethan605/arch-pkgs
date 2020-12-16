@@ -24,7 +24,7 @@ depends=(
   'ncmpcpp'
   'net-tools'
   'pavucontrol'
-  'pulseaudio-bluetooth'
+  'pulseaudio-modules-bt-git'
   'solaar'
   'telegram-desktop'
   'timidity++'
