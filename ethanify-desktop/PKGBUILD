@@ -28,6 +28,6 @@ depends=(
   'solaar'
   'telegram-desktop'
   'timidity++'
-  'zoom'
+  'xdg-desktop-portal-wlr'
 )
 

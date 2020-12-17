@@ -99,11 +99,11 @@ waybar
 which
 wl-clipboard
 wofi
+xdg-desktop-portal-wlr
 xorg-xwayland
 yay
 ytop
 zip
-zoom
 zsh
 zsh-autosuggestions
 zsh-fast-syntax-highlighting
