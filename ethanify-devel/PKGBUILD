@@ -1,8 +1,8 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
-pkgname=ethanify-base
+pkgname=ethanify-devel
 pkgver=1.0.0
 pkgrel=1
-pkgdesc="Base system configuration for ethanify systems"
+pkgdesc="Development configuration for ethanify systems"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
@@ -19,21 +19,22 @@ depends=(
   'make'
   'patch'
   'pkgconf'
-  'sudo'
   'texinfo'
   'which'
 
   # Custom dependencies
   'deno'
+  'dmidecode'
+  'dnsmasq'
   'docker'
+  'ebtables'
+  'edk2-ovmf'
   'httpie'
   'openvpn'
   'postman-bin'
   'pyenv'
-  'rvm'
+  'qemu'
   'slack-desktop'
-  'virtualbox'
-  'virtualbox-guest-iso'
-  'virtualbox-host-dkms'
+  'virt-manager'
+  'xorg-xev'
 )
-

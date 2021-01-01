@@ -16,7 +16,7 @@ depends=(
   'sway'
   'swayidle'
   'swaylock-effects-git'
-  'swappy'
+  'swappy-git'
   'waybar'
   'wl-clipboard'
   'wofi'
