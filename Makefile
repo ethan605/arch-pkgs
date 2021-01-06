@@ -48,7 +48,8 @@ chezmoi:
 	@chezmoi apply
 
 nvm:
-	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+	@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+	@source $(HOME)/.nvm/nvm.sh
 	@nvm install v14
 	@npm install --global pure-prompt neovim
 
