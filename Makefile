@@ -21,7 +21,7 @@ devel: yay
 
 sway: yay
 	$(YAY) swappy-git swaylock-effects-git
-	@cd ethanify-devel; $(MAKEPKG)
+	@cd ethanify-sway; $(MAKEPKG)
 
 theme: yay $(FONTS)
 	$(YAY) breeze-snow-cursor-theme otf-stix ttf-indic-otf
