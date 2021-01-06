@@ -40,18 +40,26 @@ qrgpg:
 $(FONTS):
 	@cd fonts/$@ && $(MAKEPKG) --asdeps
 
-ohmyzsh:
-	@curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o /tmp/ohmyzsh.sh; \
-		sh -c "/tmp/ohmyzsh.sh"
+post_install: nvm nvim chezmoi zsh
+	@mkdir -p $(HOME)/.logs
 
-post_install:
-	# @sh -c 'curl -fLo "$(HOME)/.local/share"/nvim/site/autoload/plug.vim --create-dirs \
-	   # https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-	# @nvim +PlugInstall +qa
-	# @mkdir -p $(HOME)/.logs
-	# @chezmoi init https://github.com/ethan605/dotfiles
-	# @chezmoi apply
-	# @chsh -s /usr/bin/zsh
+chezmoi:
+	@chezmoi init https://github.com/ethan605/dotfiles
+	@chezmoi apply
+
+nvm:
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+	@nvm install v14
+	@npm install --global pure-prompt neovim
+
+nvim:
+	@curl -fLo "$(HOME)/.local/share"/nvim/site/autoload/plug.vim --create-dirs \
+	   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	@nvim +PlugInstall +qa
+
+zsh:
+	@curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
+	@chsh -s /usr/bin/zsh
 
 clean:
 	@git clean -xd --force
