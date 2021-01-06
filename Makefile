@@ -3,7 +3,7 @@ SHELL=/bin/bash
 install: ethanify-base
 
 ethanify-base: yay qrgpg
-	yay -S gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
+	yay -S --asdeps gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
 	cd ethanify-base; \
 		makepkg --syncdeps --install --force
 
