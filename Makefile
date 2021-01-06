@@ -3,7 +3,6 @@ SHELL=/bin/bash
 install: yay base
 
 yay:
-	sudo pacman -S --asdeps git
 	rm -rf /tmp/yay
 	git clone https://aur.archlinux.org/yay.git /tmp/yay; \
 		cd /tmp/yay; \
