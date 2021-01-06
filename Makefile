@@ -47,8 +47,8 @@ post_install:
 	   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	@nvim +PlugInstall +qa
 	@mkdir -p $(HOME)/.logs
-	# @git clone https://github.com/ethan605/pass-store
-	# @chezmoi init https://github.com/ethan605/dotfiles
+	@chezmoi init https://github.com/ethan605/dotfiles
+	# @chezmoi apply
 
 clean:
 	@git clean -xd --force
