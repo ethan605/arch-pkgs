@@ -41,7 +41,7 @@ $(FONTS):
 	@cd fonts/$@ && $(MAKEPKG) --asdeps
 
 ohmyzsh:
-	@curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh; \
+	@curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o /tmp/ohmyzsh.sh; \
 		sh -c "/tmp/ohmyzsh.sh"
 
 post_install:
