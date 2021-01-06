@@ -40,12 +40,8 @@ qrgpg:
 $(FONTS):
 	@cd fonts/$@ && $(MAKEPKG) --asdeps
 
-post_install: nvm nvim chezmoi zsh
+post_install: nvm nvim chezmoi zsh autojump rvm
 	@mkdir -p $(HOME)/.logs
-
-chezmoi:
-	@chezmoi init https://github.com/ethan605/dotfiles
-	@chezmoi apply
 
 nvm:
 	@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
@@ -56,14 +52,19 @@ nvm:
 nvim:
 	@curl -fLo "$(HOME)/.local/share"/nvim/site/autoload/plug.vim --create-dirs \
 	   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	@nvim +PlugInstall \
-		+"CocInstall coc-clangd coc-eslint coc-deno coc-html \
-		coc-java coc-json coc-snippet coc-tabnine coc-tsserver" \
-		+qa
+	@nvim +PlugInstall +qa
+
+chezmoi:
+	@chezmoi init https://github.com/ethan605/dotfiles
+	@chezmoi apply
 
 zsh:
 	@curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 	@chsh -s /usr/bin/zsh
+
+autojump:
+
+rvm:
 
 clean:
 	@git clean -xd --force
