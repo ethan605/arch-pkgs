@@ -20,7 +20,7 @@ devel: yay
 	@cd ethanify-devel; $(MAKEPKG)
 
 sway: yay
-	$(YAY) swappy-git swaylock-effects-git
+	$(YAY) clipman swappy-git swaylock-effects-git
 	@cd ethanify-sway; $(MAKEPKG)
 
 theme: yay $(FONTS)

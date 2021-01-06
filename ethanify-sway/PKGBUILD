@@ -7,7 +7,6 @@ arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
-  'clipman'
   'dex'
   'grim'
   'imv'
@@ -21,6 +20,7 @@ depends=(
   'xorg-xwayland'
 
   # AUR dependencies
+  'clipman'
   'swappy-git'
   'swaylock-effects-git'
 )
