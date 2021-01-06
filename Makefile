@@ -44,23 +44,23 @@ post_install: nvm nvim chezmoi zsh autojump rvm
 	@mkdir -p $(HOME)/.logs
 
 nvm:
-	@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-	@source $(HOME)/.nvm/nvm.sh
-	@nvm install v14
-	@npm install --global pure-prompt neovim
+	@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash; \
+		@source $(HOME)/.nvm/nvm.sh \
+		@nvm install v14 \
+		@npm install --global pure-prompt neovim
 
 nvim:
 	@curl -fLo "$(HOME)/.local/share"/nvim/site/autoload/plug.vim --create-dirs \
-	   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	@nvim +PlugInstall +qa
+	   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim; \
+	   nvim +PlugInstall +qa
 
 chezmoi:
-	@chezmoi init https://github.com/ethan605/dotfiles
-	@chezmoi apply
+	@chezmoi init https://github.com/ethan605/dotfiles; \
+		chezmoi apply
 
 zsh:
-	@curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
-	@chsh -s /usr/bin/zsh
+	@curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash; \
+		chsh -s /usr/bin/zsh
 
 autojump:
 
