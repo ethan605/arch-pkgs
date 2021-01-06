@@ -22,7 +22,6 @@ depends=(
   'texinfo'
   'which'
 
-  # Custom dependencies
   'deno'
   'dmidecode'
   'dnsmasq'
@@ -31,10 +30,12 @@ depends=(
   'edk2-ovmf'
   'httpie'
   'openvpn'
-  'postman-bin'
   'pyenv'
   'qemu'
-  'slack-desktop'
   'virt-manager'
   'xorg-xev'
+
+  # AUR dependencies
+  'postman-bin'
+  'slack-desktop'
 )

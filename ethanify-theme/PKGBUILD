@@ -9,18 +9,20 @@ license=('MIT')
 depends=(
   'breeze-gtk'
   'breeze-icons'
-  'breeze-snow-cursor-theme'
   'noto-fonts-cjk'
   'noto-fonts-emoji'
   'otf-latin-modern'
   'otf-latinmodern-math'
-  'otf-stix'
   'ttf-hannom'
-  'ttf-indic-otf'
   'ttf-khmer'
   'ttf-tibetan-machine'
 
-  # Custom fonts
+  # AUR dependencies
+  'breeze-snow-cursor-theme'
+  'otf-stix'
+  'ttf-indic-otf'
+
+  # Custom dependencies
   'otf-operator-mono-lig'
   'ttf-haskplex-nerd'
 )

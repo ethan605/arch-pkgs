@@ -15,11 +15,13 @@ depends=(
   'slurp'
   'sway'
   'swayidle'
-  'swaylock-effects-git'
-  'swappy-git'
   'waybar'
   'wl-clipboard'
   'wofi'
   'xorg-xwayland'
+
+  # AUR dependencies
+  'swappy-git'
+  'swaylock-effects-git'
 )
 
