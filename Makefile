@@ -56,7 +56,10 @@ nvm:
 nvim:
 	@curl -fLo "$(HOME)/.local/share"/nvim/site/autoload/plug.vim --create-dirs \
 	   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	@nvim +PlugInstall +qa
+	@nvim +PlugInstall \
+		+"CocInstall coc-clangd coc-eslint coc-deno coc-html \
+		coc-java coc-json coc-snippet coc-tabnine coc-tsserver" \
+		+qa
 
 zsh:
 	@curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
