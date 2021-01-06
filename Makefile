@@ -4,7 +4,7 @@ YAY = yay -Syy --asdeps
 MAKEPKG = makepkg --syncdeps --install
 FONTS = otf-operator-mono-lig ttf-haskplex-nerd
 
-install: base desktop devel sway theme
+install: base desktop devel sway theme post_install
 
 base: yay qrgpg
 	$(YAY) gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
@@ -35,10 +35,13 @@ ifndef YAY_INSTALLED
 endif
 
 qrgpg:
-	cd utils/qrgpg; $(MAKEPKG) --asdeps
+	@cd utils/qrgpg; $(MAKEPKG) --asdeps
 
 $(FONTS):
-	cd fonts/$@ && $(MAKEPKG) --asdeps
+	@cd fonts/$@ && $(MAKEPKG) --asdeps
+
+post_install:
+	@chsh -s /usr/bin/zsh
 
 clean:
-	git clean -xd --force
+	@git clean -xd --force
