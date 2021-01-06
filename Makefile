@@ -5,7 +5,7 @@ install: ethanify-base
 ethanify-base: yay qrgpg
 	yay -S --asdeps gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
 	cd ethanify-base; \
-		makepkg --syncdeps --install --force
+		makepkg --syncdeps --install
 
 yay:
 	rm -rf /tmp/yay
@@ -15,7 +15,7 @@ yay:
 
 qrgpg:
 	cd utils/qrgpg; \
-		makepkg --syncdeps --install --asdeps --force
+		makepkg --syncdeps --install --asdeps
 
 clean:
 	git clean -xd --force
