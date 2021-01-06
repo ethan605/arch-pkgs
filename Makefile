@@ -40,15 +40,18 @@ qrgpg:
 $(FONTS):
 	@cd fonts/$@ && $(MAKEPKG) --asdeps
 
+ohmyzsh:
+	@curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh; \
+		sh -c "/tmp/ohmyzsh.sh"
+
 post_install:
-	# @chsh -s /usr/bin/zsh
-	@sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	@sh -c 'curl -fLo "$(HOME)/.local/share"/nvim/site/autoload/plug.vim --create-dirs \
-	   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-	@nvim +PlugInstall +qa
-	@mkdir -p $(HOME)/.logs
-	@chezmoi init https://github.com/ethan605/dotfiles
+	# @sh -c 'curl -fLo "$(HOME)/.local/share"/nvim/site/autoload/plug.vim --create-dirs \
+	   # https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	# @nvim +PlugInstall +qa
+	# @mkdir -p $(HOME)/.logs
+	# @chezmoi init https://github.com/ethan605/dotfiles
 	# @chezmoi apply
+	# @chsh -s /usr/bin/zsh
 
 clean:
 	@git clean -xd --force
