@@ -1,11 +1,17 @@
 SHELL=/bin/bash
 YAY=$(command -v yay)
 
-install: ethanify-base ethanify-devel
+install: ethanify-base ethanify-desktop ethanify-devel
 
 ethanify-base: yay qrgpg
 	yay -S --asdeps gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
 	cd ethanify-base; \
+		makepkg --syncdeps --install
+
+ethanify-desktop: yay
+	yay -S --asdeps dropbox expressvpn google-chrome ibus-bamboo-git \
+		megasync pulseaudio-modules-bt-git webtorrent-cli
+	cd ethanify-desktop; \
 		makepkg --syncdeps --install
 
 ethanify-devel: yay
