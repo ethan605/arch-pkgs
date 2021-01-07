@@ -41,8 +41,14 @@ qrgpg:
 $(FONTS):
 	@cd fonts/$@ && $(MAKEPKG) --asdeps
 
-post_install: autojump nvm rvm nvim chezmoi zsh
+post_install: zsh autojump nvm rvm nvim chezmoi
 	@mkdir -p $(HOME)/.logs
+
+zsh:
+	@curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash; \
+		chsh -s /usr/bin/zsh
+	@sudo mkdir /usr/local/share/zsh; \
+		sudo chown $(USER):users /usr/local/share/zsh
 
 autojump:
 	@git clone https://github.com/wting/autojump.git /tmp/autojump; \
@@ -65,10 +71,6 @@ nvim:
 chezmoi:
 	@chezmoi init https://github.com/ethan605/dotfiles; \
 		chezmoi apply
-
-zsh:
-	@curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash; \
-		chsh -s /usr/bin/zsh
 
 clean:
 	@git clean -xd --force
