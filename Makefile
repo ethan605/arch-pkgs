@@ -2,30 +2,34 @@ SHELL = /bin/bash
 YAY_INSTALLED = $(command -v yay)
 YAY = yay -Syy --asdeps
 MAKEPKG = makepkg --syncdeps --install
+META_PACKAGES = kernel base desktop devel sway theme
 FONTS = otf-operator-mono-lig ttf-haskplex-nerd
 
-install: base desktop devel sway theme
+install: $(META_PACKAGES)
+
+kernel:
+	@cd ethanify-$@; $(MAKEPKG)
 
 base: yay qrgpg
 	$(YAY) gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
-	@cd ethanify-base; $(MAKEPKG)
+	@cd ethanify-$@; $(MAKEPKG)
 
 desktop: yay
 	$(YAY) dropbox expressvpn google-chrome ibus-bamboo-git \
 		megasync pulseaudio-modules-bt-git webtorrent-cli
-	@cd ethanify-desktop; $(MAKEPKG)
+	@cd ethanify-$@; $(MAKEPKG)
 
 devel: yay
 	$(YAY) postman-bin slack-desktop
-	@cd ethanify-devel; $(MAKEPKG)
+	@cd ethanify-$@; $(MAKEPKG)
 
 sway: yay
 	$(YAY) clipman swappy-git swaylock-effects-git
-	@cd ethanify-sway; $(MAKEPKG)
+	@cd ethanify-$@; $(MAKEPKG)
 
 theme: yay $(FONTS)
 	$(YAY) breeze-snow-cursor-theme otf-stix ttf-indic-otf
-	@cd ethanify-theme; $(MAKEPKG)
+	@cd ethanify-$@; $(MAKEPKG)
 
 yay:
 ifndef YAY_INSTALLED
