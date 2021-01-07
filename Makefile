@@ -68,6 +68,15 @@ rvm:
 		rvm install 2.4; \
 		gem install neovim
 
+pyenv:
+	@pyenv install 3.9.0; \
+		pip3 install --upgrade pip; \
+		pip3 install neovim; \
+		pyenv install 2.7.18; \
+		pip2 install --upgrade pip; \
+		pip2 install neovim; \
+		pyenv global 3.9.0 2.7.18
+
 chezmoi:
 	@chezmoi init https://github.com/ethan605/dotfiles; \
 		chezmoi apply
