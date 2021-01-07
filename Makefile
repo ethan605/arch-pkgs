@@ -1,5 +1,4 @@
 SHELL = /bin/bash
-YAY_INSTALLED = $(command -v yay)
 YAY = yay -S --asdeps --answerclean All --answerdiff None --answeredit None --answerupgrade None
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --clean
 META_PACKAGES = kernel base desktop devel sway theme
@@ -32,7 +31,7 @@ theme: yay $(FONTS)
 	@cd ethanify-$@; $(MAKEPKG)
 
 yay:
-ifndef YAY_INSTALLED
+ifeq ($(command -v yay),"")
 	@rm -rf /tmp/yay
 	@git clone https://aur.archlinux.org/yay.git /tmp/yay; \
 		cd /tmp/yay; $(MAKEPKG) --asdeps
