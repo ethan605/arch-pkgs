@@ -58,7 +58,7 @@ autojump:
 nvm:
 	@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash; \
 		source $(HOME)/.nvm/nvm.sh; \
-		nvm install v14; \
+		nvm install --lts; \
 		npm install --global pure-prompt neovim
 
 rvm:
