@@ -9,33 +9,31 @@ install: $(META_PACKAGES)
 kernel:
 	@cd ethanify-$@; $(MAKEPKG)
 
-base: yay qrgpg
+base: qrgpg
 	$(YAY) gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
 	@cd ethanify-$@; $(MAKEPKG)
 
-desktop: yay
+desktop:
 	$(YAY) dropbox expressvpn google-chrome ibus-bamboo-git \
 		megasync pulseaudio-modules-bt-git webtorrent-cli
 	@cd ethanify-$@; $(MAKEPKG)
 
-devel: yay
+devel:
 	$(YAY) postman-bin slack-desktop
 	@cd ethanify-$@; $(MAKEPKG)
 
-sway: yay
+sway:
 	$(YAY) clipman swappy-git swaylock-effects-git
 	@cd ethanify-$@; $(MAKEPKG)
 
-theme: yay $(FONTS)
+theme: $(FONTS)
 	$(YAY) breeze-snow-cursor-theme otf-stix ttf-indic-otf
 	@cd ethanify-$@; $(MAKEPKG)
 
 yay:
-ifeq ($(command -v yay),"")
 	@rm -rf /tmp/yay
 	@git clone https://aur.archlinux.org/yay.git /tmp/yay; \
 		cd /tmp/yay; $(MAKEPKG) --asdeps
-endif
 
 qrgpg:
 	@cd utils/qrgpg; $(MAKEPKG) --asdeps
