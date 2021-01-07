@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.3
+pkgver=1.0.4
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -13,7 +13,6 @@ depends=(
   'browserpass'
   'browserpass-firefox'
   'firefox'
-  'firefox-developer-edition'
   'mpc'
   'mpd'
   'mpv'
