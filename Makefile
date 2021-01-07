@@ -1,7 +1,7 @@
 SHELL = /bin/bash
 YAY_INSTALLED = $(command -v yay)
-YAY = yay -Syy --asdeps
-MAKEPKG = makepkg --syncdeps --install
+YAY = yay -S --asdeps --answerclean All --answerdiff None --answeredit None --answerupgrade None
+MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --clean
 META_PACKAGES = kernel base desktop devel sway theme
 FONTS = otf-operator-mono-lig ttf-haskplex-nerd
 
