@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.1
+pkgver=1.0.2
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -32,7 +32,6 @@ depends=(
   'zsh-autosuggestions'
 
   # AUR dependencies
-  'autojump'
   'gotop-bin'
   'pass-git'
   'pass-update'

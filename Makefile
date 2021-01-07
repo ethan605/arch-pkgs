@@ -11,7 +11,7 @@ kernel:
 	@cd ethanify-$@; $(MAKEPKG)
 
 base: yay qrgpg
-	$(YAY) autojump gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
+	$(YAY) gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
 	@cd ethanify-$@; $(MAKEPKG)
 
 desktop: yay
@@ -44,14 +44,18 @@ qrgpg:
 $(FONTS):
 	@cd fonts/$@ && $(MAKEPKG) --asdeps
 
-post_install: nvm nvim chezmoi zsh rvm
+post_install: autojump nvm rvm nvim chezmoi zsh
 	@mkdir -p $(HOME)/.logs
+
+autojump:
 
 nvm:
 	@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash; \
 		source $(HOME)/.nvm/nvm.sh; \
 		nvm install v14; \
 		npm install --global pure-prompt neovim
+
+rvm:
 
 nvim:
 	@curl -fLo "$(HOME)/.local/share"/nvim/site/autoload/plug.vim --create-dirs \
@@ -65,8 +69,6 @@ chezmoi:
 zsh:
 	@curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash; \
 		chsh -s /usr/bin/zsh
-
-rvm:
 
 clean:
 	@git clean -xd --force
