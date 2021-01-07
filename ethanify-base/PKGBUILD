@@ -32,6 +32,7 @@ depends=(
   'zsh-autosuggestions'
 
   # AUR dependencies
+  'autojump'
   'gotop-bin'
   'pass-git'
   'pass-update'
