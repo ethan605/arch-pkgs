@@ -1,5 +1,5 @@
 SHELL = /bin/bash
-YAY = yay -S --asdeps --answerclean All --answerdiff None --answeredit None --answerupgrade None
+YAY = yay -S --asdeps --answerclean All --answerdiff None --answeredit None --answerupgrade None --clean
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --clean
 META_PACKAGES = kernel base desktop devel sway theme
 FONTS = otf-operator-mono-lig ttf-haskplex-nerd
@@ -45,6 +45,9 @@ post_install: autojump nvm rvm nvim chezmoi zsh
 	@mkdir -p $(HOME)/.logs
 
 autojump:
+	@git clone https://github.com/wting/autojump.git /tmp/autojump; \
+		cd /tmp/autojump; \
+		./install.py
 
 nvm:
 	@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash; \
