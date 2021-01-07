@@ -44,7 +44,7 @@ qrgpg:
 $(FONTS):
 	@cd fonts/$@ && $(MAKEPKG) --asdeps
 
-post_install: nvm nvim chezmoi zsh autojump rvm
+post_install: nvm nvim chezmoi zsh rvm
 	@mkdir -p $(HOME)/.logs
 
 nvm:
@@ -65,8 +65,6 @@ chezmoi:
 zsh:
 	@curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash; \
 		chsh -s /usr/bin/zsh
-
-autojump:
 
 rvm:
 
