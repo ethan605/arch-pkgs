@@ -1,10 +1,15 @@
 SHELL = /bin/bash
 YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit None --answerupgrade None --clean
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
+SYSTEMCTL = sudo systemctl enable --now
+SERVICES = bluetooth docker expressvpn libvirtd virtlogd
 META_PACKAGES = kernel base desktop devel sway theme
 FONTS = otf-operator-mono-lig ttf-haskplex-nerd
 
 install: $(META_PACKAGES)
+
+configure: zsh autojump nvm rvm chezmoi nvim services
+	@mkdir -p $(HOME)/.logs
 
 kernel:
 	@cd ethanify-$@; $(MAKEPKG)
@@ -40,9 +45,6 @@ qrgpg:
 
 $(FONTS):
 	@cd fonts/$@ && $(MAKEPKG) --asdeps
-
-post_install: zsh autojump nvm rvm chezmoi nvim
-	@mkdir -p $(HOME)/.logs
 
 zsh:
 	@curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash; \
@@ -85,6 +87,9 @@ nvim:
 	@curl -fLo "$(HOME)/.local/share"/nvim/site/autoload/plug.vim --create-dirs \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim; \
 		nvim +PlugInstall +qa
+
+services:
+	$(foreach service, $(SERVICES), $(SYSTEMCTL) $(service);)
 
 clean:
 	@git clean -xd --force
