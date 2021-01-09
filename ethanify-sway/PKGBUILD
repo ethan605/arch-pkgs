@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-sway
-pkgver=1.0.1
+pkgver=1.0.2
 pkgrel=1
 pkgdesc="Sway configuration for ethanify systems"
 arch=('any')
@@ -20,7 +20,6 @@ depends=(
 
   # AUR dependencies
   'clipman'
-  'grimshot'
   'swappy-git'
   'swaylock-effects-git'
 )

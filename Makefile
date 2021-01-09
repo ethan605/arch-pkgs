@@ -15,24 +15,24 @@ kernel:
 	@cd ethanify-$@; $(MAKEPKG)
 
 base: qrgpg
-	$(YAY) gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
+	@$(YAY) gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
 	@cd ethanify-$@; $(MAKEPKG)
 
 desktop:
-	$(YAY) dropbox expressvpn google-chrome ibus-bamboo-git \
+	@$(YAY) dropbox expressvpn google-chrome ibus-bamboo-git \
 		megasync pulseaudio-modules-bt-git webtorrent-cli
 	@cd ethanify-$@; $(MAKEPKG)
 
 devel:
-	$(YAY) postman-bin slack-desktop
+	@$(YAY) postman-bin slack-desktop
 	@cd ethanify-$@; $(MAKEPKG)
 
 sway:
-	$(YAY) clipman grimshot swappy-git swaylock-effects-git
+	@$(YAY) clipman swappy-git swaylock-effects-git
 	@cd ethanify-$@; $(MAKEPKG)
 
 theme: $(FONTS)
-	$(YAY) breeze-snow-cursor-theme otf-stix ttf-indic-otf
+	@$(YAY) breeze-snow-cursor-theme otf-stix ttf-indic-otf
 	@cd ethanify-$@; $(MAKEPKG)
 
 yay:
