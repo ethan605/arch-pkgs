@@ -3,7 +3,7 @@ YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit 
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
 SYSTEMCTL = sudo systemctl enable --now
 SERVICES = bluetooth docker expressvpn libvirtd virtlogd
-META_PACKAGES = kernel base desktop devel sway theme
+META_PACKAGES = kernel base desktop devel theme
 FONTS = otf-operator-mono-lig ttf-haskplex-nerd
 
 install: $(META_PACKAGES)
@@ -27,12 +27,12 @@ devel:
 	@$(YAY) postman-bin slack-desktop
 	@cd ethanify-$@; $(MAKEPKG)
 
-sway:
-	@$(YAY) clipman swappy-git swaylock-effects-git
-	@cd ethanify-$@; $(MAKEPKG)
-
 theme: $(FONTS)
 	@$(YAY) breeze-snow-cursor-theme otf-stix ttf-indic-otf
+	@cd ethanify-$@; $(MAKEPKG)
+
+sway:
+	@$(YAY) clipman swappy-git swaylock-effects-git
 	@cd ethanify-$@; $(MAKEPKG)
 
 yay:
