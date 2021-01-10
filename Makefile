@@ -35,6 +35,9 @@ sway:
 	@$(YAY) clipman swappy-git swaylock-effects-git
 	@cd ethanify-$@; $(MAKEPKG)
 
+i3:
+	@cd ethanify-$@; $(MAKEPKG)
+
 yay:
 	@rm -rf /tmp/yay
 	@git clone https://aur.archlinux.org/yay.git /tmp/yay; \
