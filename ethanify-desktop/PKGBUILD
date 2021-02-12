@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.6
+pkgver=1.0.7
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -33,7 +33,7 @@ depends=(
   'google-chrome'
   'ibus-bamboo-git'
   'megasync'
-  'pulseaudio-modules-bt-git'
+  'pipewire-common-git'
   'webtorrent-cli'
 )
 
