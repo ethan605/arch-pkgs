@@ -20,7 +20,7 @@ base: qrgpg
 
 desktop:
 	@$(YAY) dropbox expressvpn google-chrome ibus-bamboo-git \
-		megasync pipewire-common-git webtorrent-cli
+		megasync webtorrent-cli
 	@cd ethanify-$@; $(MAKEPKG)
 
 devel:
