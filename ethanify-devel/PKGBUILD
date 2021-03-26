@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -26,6 +26,7 @@ depends=(
   'dmidecode'
   'dnsmasq'
   'docker'
+  'docker-compose'
   'ebtables'
   'edk2-ovmf'
   'httpie'
