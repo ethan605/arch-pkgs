@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.1
+pkgver=1.0.3
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -30,6 +30,7 @@ depends=(
   'ebtables'
   'edk2-ovmf'
   'httpie'
+  'mediainfo'
   'openvpn'
   'pyenv'
   'qemu'
@@ -37,6 +38,8 @@ depends=(
   'xorg-xev'
 
   # AUR dependencies
+  '1password-cli'
+  'kerl'
   'postman-bin'
   'slack-desktop'
 )
