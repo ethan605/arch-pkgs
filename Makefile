@@ -24,7 +24,7 @@ desktop:
 	@cd ethanify-$@; $(MAKEPKG)
 
 devel:
-	@$(YAY) 1password-cli kerl postman-bin slack-desktop
+	@$(YAY) 1password-cli postman-bin slack-desktop
 	@cd ethanify-$@; $(MAKEPKG)
 
 theme: $(FONTS)
