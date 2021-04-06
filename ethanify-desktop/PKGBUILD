@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.10
+pkgver=1.0.11
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -30,6 +30,7 @@ depends=(
   'zathura-pdf-mupdf'
 
   # AUR dependencies
+  'browserpass-chrome'
   'dropbox'
   'expressvpn'
   'google-chrome'
