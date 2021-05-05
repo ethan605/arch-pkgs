@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.16
+pkgver=1.0.17
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -44,7 +44,7 @@ depends=(
   'expressvpn'
   'google-chrome'
   'ibus-bamboo-git'
-  'megasync'
+  # 'megasync'
   'webtorrent-cli'
   'zoom-system-qt'
 )
