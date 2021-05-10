@@ -15,7 +15,7 @@ kernel:
 	@cd ethanify-$@; $(MAKEPKG)
 
 base: qrgpg
-	@$(YAY) gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
+	@$(YAY) autojump-rs gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
 	@cd ethanify-$@; $(MAKEPKG)
 
 desktop:
