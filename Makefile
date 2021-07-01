@@ -8,7 +8,7 @@ FONTS = otf-operator-mono-lig ttf-haskplex-nerd
 
 install: $(META_PACKAGES)
 
-configure: zsh autojump nvm rvm chezmoi nvim services
+configure: zsh nvm rvm chezmoi nvim services
 	@mkdir -p $(HOME)/.logs
 
 kernel:
@@ -24,7 +24,7 @@ desktop:
 	@cd ethanify-$@; $(MAKEPKG)
 
 devel:
-	@$(YAY) 1password-cli asdf-vm downgrade grpcurl postman-bin slack-desktop
+	@$(YAY) 1password-cli asdf-vm diff-so-fancy-git downgrade grpcurl postman-bin slack-desktop
 	@cd ethanify-$@; $(MAKEPKG)
 
 theme: $(FONTS)
@@ -54,11 +54,6 @@ zsh:
 		chsh -s /usr/bin/zsh
 	@sudo mkdir /usr/local/share/zsh; \
 		sudo chown $(USER):users /usr/local/share/zsh
-
-autojump:
-	@git clone https://github.com/wting/autojump.git /tmp/autojump; \
-		cd /tmp/autojump; \
-		./install.py
 
 nvm:
 	@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash; \
