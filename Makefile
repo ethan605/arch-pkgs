@@ -15,7 +15,7 @@ kernel:
 	@cd ethanify-$@; $(MAKEPKG)
 
 base: qrgpg
-	@$(YAY) autojump-rs gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
+	@$(YAY) autojump-rs foot gotop-bin pass-git pass-update zsh-fast-syntax-highlighting
 	@cd ethanify-$@; $(MAKEPKG)
 
 desktop:
@@ -24,7 +24,8 @@ desktop:
 	@cd ethanify-$@; $(MAKEPKG)
 
 devel:
-	@$(YAY) 1password-cli asdf-vm diff-so-fancy-git downgrade grpcurl postman-bin slack-desktop
+	@$(YAY) 1password-cli asdf-vm diff-so-fancy-git downgrade grpcurl \
+		lua-language-server postman-bin slack-desktop
 	@cd ethanify-$@; $(MAKEPKG)
 
 theme: $(FONTS)
