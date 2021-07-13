@@ -25,7 +25,7 @@ desktop:
 
 devel:
 	@$(YAY) 1password-cli asdf-vm diff-so-fancy-git downgrade grpcurl \
-		lua-language-server postman-bin slack-desktop
+		jdtls lua-language-server postman-bin slack-desktop
 	@cd ethanify-$@; $(MAKEPKG)
 
 theme: $(FONTS)
