@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.13
+pkgver=1.0.14
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -35,6 +35,7 @@ depends=(
   'httpie'
   'k9s'
   'kubectx'
+  'lua'
   'mediainfo'
   'openvpn'
   'pyenv'
