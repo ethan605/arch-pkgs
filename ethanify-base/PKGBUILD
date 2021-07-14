@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.9
+pkgver=1.0.10
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -41,7 +41,6 @@ depends=(
   'gotop-bin'
   'pass-git'
   'pass-update'
-  'zsh-fast-syntax-highlighting'
 
   # Custom dependencies
   'qrgpg'
