@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.16
+pkgver=1.0.17
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -33,8 +33,10 @@ depends=(
   'ebtables'
   'edk2-ovmf'
   'go'
+  'gradle'
   'httpie'
   'k9s'
+  'kotlin'
   'kubectx'
   'lua'
   'mediainfo'
