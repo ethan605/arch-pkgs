@@ -1,22 +1,25 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.10
+pkgver=1.0.13
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
+  'alacritty'
   'axel'
   'bat'
   'chezmoi'
   'dosfstools'
   'exa'
   'exfatprogs'
+  'fd'
   'fzf'
   'git'
   'jq'
   'keychain'
+  'kitty'
   'man-db'
   'neofetch'
   'neovim'
@@ -30,14 +33,13 @@ depends=(
   'unzip'
   'usbutils'
   'vifm'
+  'wezterm'
   'yay'
   'zip'
   'zsh'
-  'zsh-autosuggestions'
 
   # AUR dependencies
   'autojump-rs'
-  'kitty'
   'gotop-bin'
   'pass-git'
   'pass-update'
