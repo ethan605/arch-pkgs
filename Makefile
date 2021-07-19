@@ -4,7 +4,7 @@ MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
 SYSTEMCTL = sudo systemctl enable --now
 SERVICES = bluetooth docker expressvpn libvirtd virtlogd
 META_PACKAGES = kernel base desktop devel theme
-FONTS = otf-operator-mono-lig ttf-haskplex-nerd
+FONTS = otf-operator-mono-lig-nerd
 
 install: $(META_PACKAGES)
 

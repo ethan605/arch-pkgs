@@ -1,8 +1,8 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=otf-operator-mono-lig
 pkgver=1.0.0
-pkgrel=2
-pkgdesc="A patched Operator Mono font with"
+pkgrel=1
+pkgdesc="A patched Operator Mono font with ligatures"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')

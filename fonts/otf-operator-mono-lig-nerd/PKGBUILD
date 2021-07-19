@@ -1,0 +1,30 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=otf-operator-mono-lig-nerd
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="A patched Operator Mono font with ligatures & nerdfont"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+
+source=(
+  "OperatorMonoLig-Nerd-Font_Book_Italic.otf"
+  "OperatorMonoLig-Nerd-Font_Book.otf"
+  "OperatorMonoLig-Nerd-Font_Light_Italic.otf"
+  "OperatorMonoLig-Nerd-Font_Light.otf"
+  "OperatorMonoLig-Nerd-Font_Medium_Italic.otf"
+  "OperatorMonoLig-Nerd-Font_Medium.otf"
+)
+
+sha512sums=(
+  "2f61e9f9d65acb03cf065a785afe938c9d32c89fe7316b376e27801628ccde877696077563ea87fdd5ba4840ce1820786900a9ca1e1ec704bb81a31ebbe56734"
+  "4b742267edf3592296347390ce57f8ab21d4f9fc9e5a853b09b605b1386ee08674a3f001631ca4c53b4853c6a7b13521228910c873c51bc5c0e1fcc00ee42429"
+  "dd33c868808e07b6b7062b7df29e63be6c2257ced288fb1cc739370e917f390bc194079d810c8ca4691aec5f48757554cf716b89c70bbc8bc326bcbad559554a"
+  "8196f0decf70be49e4d1f24a65f669a2d537d72e9cba5879372949a603cca0bb032e7969b6112bfb94ff96c46400078d612d84e79ba3f5f107c76467130c01b9"
+  "068218f245e66c459f474537d13cf0144560dd68bf2d52dbff793af31c40d7b475b726bbb0e4e34c48d63aab9b3dda65bceba3bf0003a7fcb73d179052b2e2a0"
+  "ead2a426a37c17dc0e132ffa59902784586739857a4169fd7e9ab78d044484824ff227da185f82d501f24b297f03343975178e41ce42eb53ceaedb3f3263595d"
+)
+
+package() {
+  install -Dm644 -t "$pkgdir/usr/share/fonts/OTF" *.otf
+}
