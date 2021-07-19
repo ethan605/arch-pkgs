@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.15
+pkgver=1.0.16
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -19,7 +19,6 @@ depends=(
   'git'
   'jq'
   'keychain'
-  'kitty'
   'man-db'
   'neofetch'
   'neovim'
@@ -33,7 +32,6 @@ depends=(
   'unzip'
   'usbutils'
   'vifm'
-  'wezterm'
   'yay'
   'zip'
   'zsh'
