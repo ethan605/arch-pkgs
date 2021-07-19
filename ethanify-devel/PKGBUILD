@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.18
+pkgver=1.0.19
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -51,7 +51,6 @@ depends=(
   # AUR dependencies
   '1password-cli'
   'asdf-vm'
-  'diff-so-fancy-git'
   'downgrade'
   'grpcurl'
   'jdtls'
