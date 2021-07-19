@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.17
+pkgver=1.0.18
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -15,6 +15,7 @@ depends=(
   'fakeroot'
   'flex'
   'gcc'
+  'git-delta'
   'git-lfs'
   'm4'
   'make'

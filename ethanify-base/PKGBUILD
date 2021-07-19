@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.13
+pkgver=1.0.15
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -39,10 +39,11 @@ depends=(
   'zsh'
 
   # AUR dependencies
-  'autojump-rs'
+  'foot'
   'gotop-bin'
   'pass-git'
   'pass-update'
+  'zoxide'
 
   # Custom dependencies
   'qrgpg'
