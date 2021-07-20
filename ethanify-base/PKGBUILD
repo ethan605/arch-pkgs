@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.16
+pkgver=1.0.17
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -39,6 +39,7 @@ depends=(
   # AUR dependencies
   'foot'
   'gotop-bin'
+  'libsixel'
   'pass-git'
   'pass-update'
   'zoxide'

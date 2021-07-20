@@ -15,7 +15,7 @@ kernel:
 	@cd ethanify-$@; $(MAKEPKG)
 
 base: qrgpg
-	@$(YAY) foot gotop-bin pass-git pass-update zoxide
+	@$(YAY) foot gotop-bin libsixel pass-git pass-update zoxide
 	@cd ethanify-$@; $(MAKEPKG)
 
 desktop:
