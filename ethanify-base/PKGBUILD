@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.17
+pkgver=1.0.18
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -27,8 +27,8 @@ depends=(
   'openssh'
   'pass-otp'
   'ripgrep'
+  'starship'
   'sudo'
-  'termite'
   'unzip'
   'usbutils'
   'vifm'
@@ -46,5 +46,8 @@ depends=(
 
   # Custom dependencies
   'qrgpg'
+
+  # Obsolete
+  'termite'
 )
 
