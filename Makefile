@@ -24,8 +24,8 @@ desktop:
 	@cd ethanify-$@; $(MAKEPKG)
 
 devel:
-	@$(YAY) 1password-cli asdf-vm diff-so-fancy-git downgrade grpcurl \
-		jdtls lua-language-server postman-bin slack-desktop
+	@$(YAY) 1password-cli amazon-ecr-credential-helper asdf-vm diff-so-fancy-git downgrade \
+		grpcurl jdtls lua-language-server postman-bin slack-desktop
 	@cd ethanify-$@; $(MAKEPKG)
 
 theme: $(FONTS)

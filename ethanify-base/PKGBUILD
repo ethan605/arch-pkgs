@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.18
+pkgver=1.0.19
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -15,9 +15,11 @@ depends=(
   'exa'
   'exfatprogs'
   'fd'
+  'figlet'
   'fzf'
   'git'
   'jq'
+  'keybase'
   'keychain'
   'man-db'
   'neofetch'
