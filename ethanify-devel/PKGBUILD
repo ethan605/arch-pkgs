@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.20
+pkgver=1.0.21
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -35,6 +35,7 @@ depends=(
   'edk2-ovmf'
   'go'
   'gradle'
+  'helm'
   'httpie'
   'k9s'
   'kotlin'
@@ -45,6 +46,7 @@ depends=(
   'pyenv'
   'qemu'
   'rust'
+  'sshfs'
   'virt-manager'
   'xorg-xev'
 
