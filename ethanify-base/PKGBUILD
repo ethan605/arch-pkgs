@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.19
+pkgver=1.0.20
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -48,8 +48,5 @@ depends=(
 
   # Custom dependencies
   'qrgpg'
-
-  # Obsolete
-  'termite'
 )
 
