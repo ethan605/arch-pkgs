@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.21
+pkgver=1.0.22
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -54,10 +54,12 @@ depends=(
   '1password-cli'
   'amazon-ecr-credential-helper'
   'asdf-vm'
+  'direnv'
   'downgrade'
   'grpcurl'
   'jdtls'
   'lua-language-server'
   'postman-bin'
+  'rbenv'
   'slack-desktop'
 )
