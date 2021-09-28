@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.19
+pkgver=1.0.20
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -25,10 +25,6 @@ depends=(
   'pavucontrol'
   'pulseaudio'
   'pulseaudio-bluetooth'
-  # 'python-colorama'
-  # 'python-prompt_toolkit'
-  # 'python-ruamel-yaml'
-  # 'python-s3transfer'
   'solaar'
   'telegram-desktop'
   'thunderbird'
@@ -45,6 +41,7 @@ depends=(
   'google-chrome'
   'ibus-bamboo-git'
   'megasync-bin'
+  'spotify'
   'webtorrent-cli'
   'zoom-system-qt'
 )
