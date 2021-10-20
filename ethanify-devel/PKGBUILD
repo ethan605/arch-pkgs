@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.22
+pkgver=1.0.23
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -58,6 +58,7 @@ depends=(
   'downgrade'
   'grpcurl'
   'jdtls'
+  'libffi7'
   'lua-language-server'
   'postman-bin'
   'rbenv'
