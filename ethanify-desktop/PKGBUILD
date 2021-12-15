@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.20
+pkgver=1.0.21
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -14,6 +14,11 @@ depends=(
   'browserpass-firefox'
   'cups'
   'dex'
+  'fcitx5'
+  'fcitx5-configtool'
+  'fcitx5-gtk'
+  'fcitx5-qt'
+  'fcitx5-unikey'
   'firefox'
   'hplip'
   'libpipewire02'
@@ -38,11 +43,12 @@ depends=(
   'browserpass-chrome'
   'dropbox'
   'expressvpn'
+  'fcitx5-breeze'
   'google-chrome'
-  'ibus-bamboo-git'
   'megasync-bin'
   'spotify'
   'webtorrent-cli'
+  'wofi-emoji-git'
   'zoom-system-qt'
 )
 
