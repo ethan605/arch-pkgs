@@ -25,7 +25,7 @@ desktop:
 
 devel:
 	@$(YAY) 1password-cli amazon-ecr-credential-helper asdf-vm diff-so-fancy-git direnv downgrade \
-		grpcurl jdtls libffi7 lua-language-server postman-bin rbenv slack-desktop
+		grpcurl jdtls libffi7 lua-language-server postman-bin slack-desktop
 	@cd ethanify-$@; $(MAKEPKG)
 
 theme: $(FONTS)
