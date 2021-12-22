@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.25
+pkgver=1.0.26
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -46,6 +46,7 @@ depends=(
   'qemu'
   'rust'
   'sshfs'
+  'terraform'
   'virt-manager'
   'xorg-xev'
 
