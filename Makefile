@@ -33,7 +33,7 @@ theme: $(FONTS)
 	@cd ethanify-$@; $(MAKEPKG)
 
 sway:
-	@$(YAY) clipman j4-dmenu-desktop swappy-git swaylock-effects-git wofi-emoji-git
+	@$(YAY) clipman j4-dmenu-desktop swappy-git swaylock-effects-git
 	@cd ethanify-$@; $(MAKEPKG)
 
 i3:
