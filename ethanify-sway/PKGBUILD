@@ -1,12 +1,13 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-sway
-pkgver=1.0.6
+pkgver=1.0.7
 pkgrel=1
 pkgdesc="Sway configuration for ethanify systems"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
+  'bemenu-wayland'
   'grim'
   'imv'
   'mako'
@@ -20,7 +21,9 @@ depends=(
 
   # AUR dependencies
   'clipman'
+  'j4-dmenu-desktop'
   'swappy-git'
   'swaylock-effects-git'
+  'wofi-emoji-git'
 )
 

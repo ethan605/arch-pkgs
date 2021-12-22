@@ -20,7 +20,7 @@ base: qrgpg
 
 desktop:
 	@$(YAY) browserpass-chrome dropbox expressvpn google-chrome fcitx5-breeze \
-		megasync-bin spotify webtorrent-cli wofi-emoji-git zoom-system-qt
+		megasync-bin spotify webtorrent-cli zoom-system-qt
 	@cd ethanify-$@; $(MAKEPKG)
 
 devel:
@@ -33,7 +33,7 @@ theme: $(FONTS)
 	@cd ethanify-$@; $(MAKEPKG)
 
 sway:
-	@$(YAY) clipman swappy-git swaylock-effects-git
+	@$(YAY) clipman j4-dmenu-desktop swappy-git swaylock-effects-git wofi-emoji-git
 	@cd ethanify-$@; $(MAKEPKG)
 
 i3:
