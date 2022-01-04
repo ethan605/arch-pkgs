@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.21
+pkgver=1.0.22
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -22,6 +22,7 @@ depends=(
   'keybase'
   'keychain'
   'man-db'
+  'ncdu'
   'neofetch'
   'neovim'
   'networkmanager'
