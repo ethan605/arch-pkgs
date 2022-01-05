@@ -20,12 +20,12 @@ base: qrgpg
 
 desktop:
 	@$(YAY) browserpass-chrome dropbox expressvpn google-chrome fcitx5-breeze \
-		megasync-bin nomachine spotify webtorrent-cli zoom-system-qt
+		megasync-bin nomachine spotify webtorrent-cli
 	@cd ethanify-$@; $(MAKEPKG)
 
 devel:
 	@$(YAY) 1password-cli amazon-ecr-credential-helper asdf-vm diff-so-fancy-git direnv downgrade \
-		grpcurl jdtls libffi7 lua-language-server postman-bin slack-desktop
+		grpcurl jdtls libffi7 lua-language-server postman-bin
 	@cd ethanify-$@; $(MAKEPKG)
 
 theme: $(FONTS)
@@ -33,7 +33,7 @@ theme: $(FONTS)
 	@cd ethanify-$@; $(MAKEPKG)
 
 sway:
-	@$(YAY) clipman j4-dmenu-desktop swappy-git swaylock-effects-git
+	@$(YAY) clipman j4-dmenu-desktop slack-wayland swappy-git swaylock-effects-git wev zoom-system-qt
 	@cd ethanify-$@; $(MAKEPKG)
 
 i3:

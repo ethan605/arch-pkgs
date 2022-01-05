@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-sway
-pkgver=1.0.8
+pkgver=1.0.9
 pkgrel=1
 pkgdesc="Sway configuration for ethanify systems"
 arch=('any')
@@ -22,7 +22,10 @@ depends=(
   # AUR dependencies
   'clipman'
   'j4-dmenu-desktop'
+  'slack-wayland'
   'swappy-git'
   'swaylock-effects-git'
+  'wev'
+  'zoom-system-qt'
 )
 
