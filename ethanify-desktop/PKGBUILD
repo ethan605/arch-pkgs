@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.25
+pkgver=1.0.26
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -20,6 +20,7 @@ depends=(
   'fcitx5-qt'
   'fcitx5-unikey'
   'firefox'
+  'geary'
   'hplip'
   'libpipewire02'
   'mpc'
