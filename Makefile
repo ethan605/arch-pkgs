@@ -3,16 +3,13 @@ YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit 
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
 SYSTEMCTL = sudo systemctl enable --now
 SERVICES = bluetooth docker expressvpn libvirtd virtlogd
-META_PACKAGES = kernel base desktop devel theme
+META_PACKAGES = base desktop devel theme
 FONTS = otf-operator-mono-lig-nerd
 
 install: $(META_PACKAGES)
 
 configure: zsh chezmoi nvim services
 	@mkdir -p $(HOME)/.logs
-
-kernel:
-	@cd ethanify-$@; $(MAKEPKG)
 
 base: qrgpg
 	@$(YAY) foot gotop-bin libsixel pass-git pass-update zoxide

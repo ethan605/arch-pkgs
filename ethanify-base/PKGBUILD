@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.23
+pkgver=1.0.24
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -9,18 +9,25 @@ license=('MIT')
 depends=(
   'alacritty'
   'axel'
+  'base'
   'bat'
   'chezmoi'
   'dosfstools'
+  'efibootmgr'
   'exa'
   'exfatprogs'
   'fd'
   'figlet'
   'fzf'
   'git'
+  'grub'
   'jq'
   'keybase'
   'keychain'
+  'linux'
+  'linux-firmware'
+  'linux-lts'
+  'linux-lts-headers'
   'man-db'
   'ncdu'
   'neofetch'
@@ -36,7 +43,6 @@ depends=(
   'unzip'
   'usbutils'
   'vifm'
-  'yay'
   'zip'
   'zsh'
 
@@ -46,6 +52,7 @@ depends=(
   'libsixel'
   'pass-git'
   'pass-update'
+  'yay'
   'zoxide'
 
   # Custom dependencies
