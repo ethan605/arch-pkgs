@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.28
+pkgver=1.0.29
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -46,8 +46,6 @@ depends=(
   'qemu'
   'rust'
   'terraform'
-  'virt-manager'
-  'xorg-xev'
 
   # AUR dependencies
   '1password-cli'
@@ -59,5 +57,4 @@ depends=(
   'jdtls'
   'libffi7'
   'lua-language-server'
-  'postman-bin'
 )

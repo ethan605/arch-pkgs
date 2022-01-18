@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.30
+pkgver=1.0.31
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -37,6 +37,7 @@ depends=(
   'telegram-desktop'
   'thunderbird'
   'timidity++'
+  'virt-manager'
   'wf-recorder'
   'xdg-desktop-portal-wlr'
   'zathura'
@@ -51,6 +52,7 @@ depends=(
   'libsixel'
   'megasync-bin'
   'nomachine'
+  'postman-bin'
   'spotify'
   'webtorrent-cli'
 )
