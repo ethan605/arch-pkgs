@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.27
+pkgver=1.0.29
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -44,13 +44,11 @@ depends=(
   # AUR dependencies
   'browserpass-chrome'
   'dropbox'
-  'expressvpn'
   'fcitx5-breeze'
   'google-chrome'
   'megasync-bin'
   'nomachine'
   'spotify'
   'webtorrent-cli'
-  'zoom'
 )
 

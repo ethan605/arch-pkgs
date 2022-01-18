@@ -2,26 +2,23 @@ SHELL = /bin/bash
 YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit None --answerupgrade None --clean
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
 SYSTEMCTL = sudo systemctl enable --now
-SERVICES = bluetooth docker expressvpn libvirtd virtlogd
-META_PACKAGES = base desktop devel theme
+SERVICES = bluetooth docker libvirtd virtlogd
+FLATPAK_APPS = us.zoom.Zoom
 FONTS = otf-operator-mono-lig-nerd
 
-install: $(META_PACKAGES)
-
-configure: zsh chezmoi nvim services
-	@mkdir -p $(HOME)/.logs
+meta: base desktop devel theme sway
 
 base: qrgpg
 	@$(YAY) foot gotop-bin libsixel pass-git pass-update zoxide
 	@cd ethanify-$@; $(MAKEPKG)
 
 desktop:
-	@$(YAY) browserpass-chrome dropbox expressvpn google-chrome fcitx5-breeze \
-		megasync-bin nomachine spotify webtorrent-cli zoom
+	@$(YAY) browserpass-chrome dropbox google-chrome fcitx5-breeze \
+		megasync-bin nomachine spotify webtorrent-cli
 	@cd ethanify-$@; $(MAKEPKG)
 
 devel:
-	@$(YAY) 1password-cli amazon-ecr-credential-helper asdf-vm diff-so-fancy-git direnv downgrade \
+	@$(YAY) 1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade \
 		grpcurl jdtls libffi7 lua-language-server postman-bin
 	@cd ethanify-$@; $(MAKEPKG)
 
@@ -30,19 +27,22 @@ theme: $(FONTS)
 	@cd ethanify-$@; $(MAKEPKG)
 
 sway:
-	@$(YAY) clipman j4-dmenu-desktop slack-wayland swappy-git swaylock-effects-git wev # zoom-system-qt
+	@$(YAY) clipman j4-dmenu-desktop slack-wayland swappy-git swaylock-effects-git wev
 	@cd ethanify-$@; $(MAKEPKG)
+
+qrgpg:
+	@cd utils/qrgpg; $(MAKEPKG) --asdeps
 
 yay:
 	@rm -rf /tmp/yay
 	@git clone https://aur.archlinux.org/yay.git /tmp/yay; \
 		cd /tmp/yay; $(MAKEPKG) --asdeps
 
-qrgpg:
-	@cd utils/qrgpg; $(MAKEPKG) --asdeps
-
 $(FONTS):
 	@cd fonts/$@ && $(MAKEPKG) --asdeps
+
+configure: zsh chezmoi nvim services
+	@mkdir -p $(HOME)/.logs
 
 zsh:
 	@chsh -s /usr/bin/zsh

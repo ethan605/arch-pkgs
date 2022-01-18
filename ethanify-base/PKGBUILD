@@ -1,15 +1,25 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.24
+pkgver=1.0.26
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
+  # From installation steps
+  'base'
+  'grub'
+  'linux'
+  'linux-firmware'
+  'linux-lts'
+  'linux-lts-headers'
+  'networkmanager'
+  'sudo'
+
+  # Base tools
   'alacritty'
   'axel'
-  'base'
   'bat'
   'chezmoi'
   'dosfstools'
@@ -17,28 +27,21 @@ depends=(
   'exa'
   'exfatprogs'
   'fd'
-  'figlet'
+  'flatpak'
   'fzf'
   'git'
-  'grub'
   'jq'
   'keybase'
   'keychain'
-  'linux'
-  'linux-firmware'
-  'linux-lts'
-  'linux-lts-headers'
   'man-db'
   'ncdu'
   'neofetch'
   'neovim'
-  'networkmanager'
   'ntfs-3g'
   'openssh'
   'pass-otp'
   'ripgrep'
   'starship'
-  'sudo'
   'syncthing'
   'unzip'
   'usbutils'
@@ -54,8 +57,5 @@ depends=(
   'pass-update'
   'yay'
   'zoxide'
-
-  # Custom dependencies
-  'qrgpg'
 )
 
