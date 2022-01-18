@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.31
+pkgver=1.0.32
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -14,7 +14,6 @@ depends=(
   'browserpass'
   'browserpass-firefox'
   'cups'
-  'dex'
   'fcitx5'
   'fcitx5-configtool'
   'fcitx5-gtk'
@@ -32,14 +31,12 @@ depends=(
   'pavucontrol'
   'pulseaudio'
   'pulseaudio-bluetooth'
-  'qalculate-gtk'
   'solaar'
   'telegram-desktop'
   'thunderbird'
   'timidity++'
   'virt-manager'
   'wf-recorder'
-  'xdg-desktop-portal-wlr'
   'zathura'
   'zathura-pdf-mupdf'
 
@@ -47,12 +44,11 @@ depends=(
   'browserpass-chrome'
   'dropbox'
   'fcitx5-breeze'
-  'foot'
   'google-chrome'
-  'libsixel'
   'megasync-bin'
   'nomachine'
   'postman-bin'
+  'slack-wayland'
   'spotify'
   'webtorrent-cli'
 )

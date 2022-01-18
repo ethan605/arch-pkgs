@@ -1,7 +1,7 @@
 SHELL = /bin/bash
 YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit None --answerupgrade None --clean
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
-META_PACKAGES = base devel desktop theme sway
+META_PACKAGES = base devel sway theme desktop
 SYSTEMCTL = sudo systemctl enable --now
 FLATPAK_APPS = us.zoom.Zoom
 FONTS = otf-operator-mono-lig-nerd
