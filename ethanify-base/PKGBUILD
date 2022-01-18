@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.26
+pkgver=1.0.27
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -18,12 +18,10 @@ depends=(
   'sudo'
 
   # Base tools
-  'alacritty'
   'axel'
   'bat'
   'chezmoi'
   'dosfstools'
-  'efibootmgr'
   'exa'
   'exfatprogs'
   'fd'
@@ -50,9 +48,7 @@ depends=(
   'zsh'
 
   # AUR dependencies
-  'foot'
   'gotop-bin'
-  'libsixel'
   'pass-git'
   'pass-update'
   'yay'

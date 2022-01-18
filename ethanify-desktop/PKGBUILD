@@ -1,12 +1,13 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.29
+pkgver=1.0.30
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
+  'alacritty'
   'blueman'
   'bluez'
   'bluez-utils'
@@ -45,7 +46,9 @@ depends=(
   'browserpass-chrome'
   'dropbox'
   'fcitx5-breeze'
+  'foot'
   'google-chrome'
+  'libsixel'
   'megasync-bin'
   'nomachine'
   'spotify'

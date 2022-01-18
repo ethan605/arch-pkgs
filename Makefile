@@ -1,5 +1,5 @@
 SHELL = /bin/bash
-YAY = yay -S --asdeps --needed
+YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit None --answerupgrade None --clean
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
 SYSTEMCTL = sudo systemctl enable --now
 SERVICES = bluetooth docker libvirtd virtlogd
