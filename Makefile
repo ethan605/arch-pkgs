@@ -1,12 +1,15 @@
 SHELL = /bin/bash
-YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit None --answerupgrade None --clean
+YAY = yay -S --asdeps --needed
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
 SYSTEMCTL = sudo systemctl enable --now
 SERVICES = bluetooth docker libvirtd virtlogd
 FLATPAK_APPS = us.zoom.Zoom
 FONTS = otf-operator-mono-lig-nerd
 
-meta: base desktop devel theme sway
+pacman: base desktop devel theme sway
+
+flatpak:
+	@flatpak install flathub @$(FLATPAK_APPS)
 
 base: qrgpg
 	@$(YAY) foot gotop-bin libsixel pass-git pass-update zoxide
