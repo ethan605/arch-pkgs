@@ -35,7 +35,7 @@ aur:
 		breeze-snow-cursor-theme browserpass-chrome clipman direnv downgrade \
 		dropbox fcitx5-breeze foot google-chrome gotop-bin grpcurl j4-dmenu-desktop \
 		jdtls libffi7 libsixel megasync-bin nomachine otf-stix pass-git pass-update \
-		postman-bin slack-wayland spotify swappy-git swaylock-effects-git ttf-indic-otf \
+		postman-bin slack-desktop spotify swappy-git swaylock-effects-git ttf-indic-otf \
 		wev webtorrent-cli zoxide
 
 flatpak:

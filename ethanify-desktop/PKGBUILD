@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -48,7 +48,7 @@ depends=(
   'megasync-bin'
   'nomachine'
   'postman-bin'
-  'slack-wayland'
+  'slack-desktop'
   'spotify'
   'webtorrent-cli'
 )

@@ -1,7 +1,7 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=otf-operator-mono
 pkgver=1.0.0
-pkgrel=2
+pkgrel=1
 pkgdesc="Original Operator Mono font"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
