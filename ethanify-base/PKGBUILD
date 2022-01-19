@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -9,11 +9,13 @@ license=('MIT')
 depends=(
   # From installation steps
   'base'
+  'efitools'
   'grub'
+  'intel-ucode'
   'linux'
   'linux-firmware'
   'networkmanager'
-  'sudo'
+  'sbsigntools'
 
   # Base tools
   'axel'
