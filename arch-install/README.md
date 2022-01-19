@@ -369,12 +369,14 @@ $ chezmoi apply
 $ cd arch-pkgs
 
 $ make yay
-$ make zsh
-$ make nvim
 
 $ pacman -S --asdeps sway waybar firefox
 $ yay -S --asdeps foot
+$ chezmoi apply ~/.config
 # logout and login again to boot into sway
+
+$ make nvim
+$ make zsh
 ```
 
 ### Full packages
@@ -383,10 +385,11 @@ $ yay -S --asdeps foot
 $ cd arch-pkgs
 
 $ make aur
+$ make fonts
+$ make theme
 $ make base
 $ make devel
 $ make sway
-$ make theme
 $ make desktop
 $ make flatpak
 ```

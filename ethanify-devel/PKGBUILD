@@ -31,7 +31,7 @@ depends=(
   'dnsmasq'
   'docker'
   'docker-compose'
-  'ebtables'
+  #'ebtables'
   'edk2-ovmf'
   'go'
   'gradle'
