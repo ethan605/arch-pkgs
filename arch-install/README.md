@@ -359,6 +359,7 @@ $ git clone git@github.com:ethan605/<password-store-repo>.git ~/.password-store
 $ chezmoi cd
 $ git remote remove origin
 $ git remote add origin git@github.com:ethan605/dotfiles.git
+$ git push -u origin main
 $ chezmoi apply
 ```
 
