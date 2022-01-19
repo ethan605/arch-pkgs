@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-theme
-pkgver=1.0.3
+pkgver=1.0.0
 pkgrel=1
 pkgdesc="Theme configuration for ethanify systems"
 arch=('any')

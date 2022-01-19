@@ -32,9 +32,9 @@ $(META_PACKAGES):
 
 aur:
 	@$(YAY) 1password-cli amazon-ecr-credential-helper asdf-vm \
-		breeze-snow-cursor-theme browserpass-chrome clipman direnv \
-		downgrade dropbox fcitx5-breeze foot google-chrome gotop-bin \
-		j4-dmenu-desktop libsixel otf-stix pass-git pass-update slack-wayland \
+		breeze-snow-cursor-theme browserpass-chrome clipman direnv downgrade \
+		dropbox fcitx5-breeze foot google-chrome gotop-bin grpcurl j4-dmenu-desktop \
+		jdtls libffi7 libsixel otf-stix pass-git pass-update slack-wayland \
 		swappy-git swaylock-effects-git ttf-indic-otf wev zoxide
 
 flatpak:

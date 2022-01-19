@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-sway
-pkgver=1.0.11
+pkgver=1.0.0
 pkgrel=1
 pkgdesc="Sway configuration for ethanify systems"
 arch=('any')
