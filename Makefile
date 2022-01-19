@@ -18,7 +18,7 @@ yay:
 zsh:
 	@chsh -s /usr/bin/zsh
 	# For zsh's site-functions
-	@sudo mkdir /usr/local/share/zsh; \
+	@sudo mkdir -p /usr/local/share/zsh; \
 		sudo chown $(USER):users /usr/local/share/zsh
 
 nvim:
