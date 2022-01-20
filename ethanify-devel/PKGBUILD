@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.1
+pkgver=1.0.2
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -25,13 +25,13 @@ depends=(
   'texinfo'
   'which'
 
+  'aws-cli'
   'ctags'
   'deno'
   'dmidecode'
   'dnsmasq'
   'docker'
   'docker-compose'
-  #'ebtables'
   'edk2-ovmf'
   'go'
   'gradle'
