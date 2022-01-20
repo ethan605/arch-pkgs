@@ -269,9 +269,6 @@ $ ./sbkeys.sh
 # Backup keys
 $ mkdir -p /root/sbkeys
 $ mv GUID.txt db.* KEK.* PK.* /root/sbkeys
-
-# Prepare keys to sign and enroll
-$ cp *.auth *.cer *.esl db.key db.crt /boot
 ```
 
 #### Sign keys
@@ -292,12 +289,43 @@ $ cp *.hook /etc/pacman.d/hooks
 
 #### Enrolling keys in firmware
 
-Reboot in UEFI and assign the keys using
-[firmware setup utility](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Using_firmware_setup_utility):
+Reboot in UEFI and put the firmware to "Setup" mode:
 
 ```shell
 $ systemctl reboot --firmware
 ```
+
+Use [`sbkeysync`](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Using_sbkeysync) to install keys:
+
+```shell
+$ mkdir -p /etc/secureboot/keys/{db,KEK,PK}
+
+# Verify with dry-run
+$ sbkeysync --pk --dry-run --verbose
+
+# Enroll keys - KEK & db first
+$ sbkeysync --verbose
+
+# Enroll keys - PK last
+$ sbkeysync --verbose --pk
+```
+
+In case of write errors, temporarily change firmware attrs:
+
+```shell
+$ chattr -i /sys/firmware/efi/efivars/{PK,KEK,db}*
+```
+
+Reboot to BIOS to check the firmware being back to "User" mode,
+then reboot to Arch Linux to verify
+[secure boot status](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#After_booting_the_OS).
+
+#### Notes for Intel NUCs
+
+* Within **Intel Visual BIOS**, there are no options to manually enroll the keys,
+  hence the option of [using firmware setup utility](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Using_firmware_setup_utility) is not feasible.
+* After Secure Boot is successfully set, boot options like "F2 to Enter Setup" and
+  "F10 to Enter Boot Menu" might disappear but pressing those keys should still work.
 
 ### Configure users
 
@@ -399,6 +427,13 @@ $ make devel
 $ make sway
 $ make desktop
 $ make flatpak
+```
+
+Add metapackages to ignore list of `pacman.conf`:
+
+```shell
+# /etc/pacman.conf
+IgnorePkg   = ethanify-base  ethanify-desktop  ethanify-devel  ethanify-sway  ethanify-theme  otf-operator-mono-lig-nerd
 ```
 
 ### Screen sharing
