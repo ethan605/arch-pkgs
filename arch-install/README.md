@@ -379,6 +379,13 @@ $ make nvim
 $ make zsh
 ```
 
+### Systemd services
+
+```shell
+$ systemctl start bluetooth docker
+$ systemctl --user start mpd syncthing
+```
+
 ### Full packages
 
 ```shell
@@ -393,6 +400,18 @@ $ make sway
 $ make desktop
 $ make flatpak
 ```
+
+### Screen sharing
+
+(mostly following [this guide](https://soyuka.me/make-screen-sharing-wayland-sway-work/))
+
+Check for required service to be running:
+
+```shell
+$ systemctl --user status pipewire xdg-desktop-portal xdg-desktop-portal-wlr
+```
+
+Open `google-chrome` & enable `enable-webrtc-pipewire-capturer` in `chrome://flags`
 
 ## 4. Troubleshooting
 
