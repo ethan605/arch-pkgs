@@ -31,12 +31,11 @@ $(META_PACKAGES):
 	@cd ethanify-$@; $(MAKEPKG)
 
 aur:
-	@$(YAY) 1password-cli amazon-ecr-credential-helper asdf-vm \
-		breeze-snow-cursor-theme browserpass-chrome clipman direnv downgrade \
-		dropbox fcitx5-breeze foot google-chrome gotop-bin grpcurl j4-dmenu-desktop \
-		jdtls libffi7 libsixel megasync-bin nomachine otf-stix pass-git pass-update \
-		postman-bin slack-desktop spotify swappy-git swaylock-effects-git ttf-indic-otf \
-		wev webtorrent-cli zoxide
+	@$(YAY) 1password-cli amazon-ecr-credential-helper asdf-vm breeze-snow-cursor-theme \
+		browserpass-chrome clipman direnv downgrade dropbox fcitx5-breeze foot google-chrome \
+		gotop-bin grpcurl j4-dmenu-desktop jdtls libffi7 megasync-bin nomachine otf-stix \
+		pass-git pass-update postman-bin slack-desktop spotify swappy-git swaylock-effects-git \
+		ttf-indic-otf wev webtorrent-cli zoxide
 
 flatpak:
 	@flatpak install flathub @$(FLATPAK_APPS)
