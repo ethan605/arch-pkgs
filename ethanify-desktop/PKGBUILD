@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.1
+pkgver=1.0.2
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -9,15 +9,11 @@ license=('MIT')
 depends=(
   'alacritty'
   'blueman'
-  'bluez'
   'bluez-utils'
-  'browserpass'
   'browserpass-firefox'
   'cups'
-  'fcitx5'
   'fcitx5-configtool'
   'fcitx5-gtk'
-  'fcitx5-qt'
   'fcitx5-unikey'
   'firefox'
   'geary'
@@ -29,7 +25,6 @@ depends=(
   'ncmpcpp'
   'net-tools'
   'pavucontrol'
-  'pulseaudio'
   'pulseaudio-bluetooth'
   'solaar'
   'telegram-desktop'
@@ -37,7 +32,6 @@ depends=(
   'timidity++'
   'virt-manager'
   'wf-recorder'
-  'zathura'
   'zathura-pdf-mupdf'
 
   # AUR dependencies
