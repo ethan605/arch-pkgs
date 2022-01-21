@@ -31,7 +31,8 @@ $(META_PACKAGES):
 	@cd ethanify-$@; $(MAKEPKG)
 
 aur:
-	@$(YAY) gotop-bin pass-extension-tail pass-git pass-update yay zoxide \
+	@$(YAY) \
+		gotop-bin pass-attr pass-clip pass-extension-tail pass-git pass-update yay zoxide \
 		browserpass-chrome dropbox fcitx5-breeze google-chrome megasync-bin \
 		nomachine postman-bin slack-desktop spotify webtorrent-cli \
 		1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade \
