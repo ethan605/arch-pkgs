@@ -37,9 +37,8 @@ $ lsblk
 $ DISK=/dev/<disk name>
 
 $ sgdisk --clear \
-    --new=1:0:+1MiB   --typecode=1:ef02 --change-name=1:BIOS \
-    --new=2:0:+550MiB --typecode=2:ef00 --change-name=2:EFI \
-    --new=3:0:0       --typecode=3:8309 --change-name=3:cryptlvm \
+    --new=1:0:+550MiB --typecode=1:ef00 --change-name=1:EFI \
+    --new=2:0:0       --typecode=2:8309 --change-name=2:cryptlvm \
     $DISK
 ```
 
@@ -51,11 +50,21 @@ $ gdisk -l $DISK
 
 should print something like this:
 
-| Number | Start (sector) | End (sector) | Size               | Code | Name     |
-| -----: | -------------: | -----------: | ------------------ | ---- | -------- |
-| 1      | 2048           | 4095         | 1024.0 KiB         | EF02 | BIOS     |
-| 2      | 4096           | 1130495      | 550.0 MiB          | EF00 | EFI      |
-| 3      | 1130496        | ...          | (rest of the disk) | 8309 | cryptlvm |
+```shell
+GPT fdisk (gdisk) version 1.0.8
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+...
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048         1128447   550.0 MiB   EF00  EFI
+   3         1128448             ...   ... GiB     8309  cryptlvm
+```
 
 ### Setup [LUKS on LVM](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#LUKS_on_LVM)
 
@@ -71,6 +80,9 @@ $ lsblk
 ```
 
 ### Preparing logical volumes
+
+Use 8GB for `swap`, 32GB for `/root` and
+[a dedicated `/home` partition](https://askubuntu.com/questions/142695/what-are-the-pros-and-cons-of-having-a-separate-home-partition/142704#142704)
 
 ```shell
 $ pvcreate /dev/mapper/cryptlvm
@@ -247,7 +259,7 @@ $ exit
 $ reboot
 ```
 
-## 3. [Post installation](https://wiki.archlinux.org/index.php/installation_guide#Configure_the_system)
+## 3. [Post installation](https://wiki.archlinux.org/title/General_recommendations)
 
 ### Secure boot
 
@@ -401,6 +413,7 @@ $ make yay
 $ pacman -S --asdeps sway waybar firefox
 $ yay -S --asdeps foot
 $ chezmoi apply ~/.config
+$ mkdir -p ~/.logs
 # logout and login again to boot into sway
 
 $ make nvim
