@@ -36,7 +36,7 @@ aur:
 		browserpass-chrome dropbox fcitx5-breeze google-chrome megasync-bin \
 		nomachine postman-bin slack-desktop spotify webtorrent-cli \
 		1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade \
-		grpcurl jdtls libffi7 lua-language-server \
+		grpcurl jdtls kotlin-language-server libffi7 lua-language-server \
 		breeze-snow-cursor-theme otf-stix ttf-indic-otf \
 		clipman foot j4-dmenu-desktop swappy-git swaylock-effects-git wev
 
