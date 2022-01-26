@@ -202,9 +202,10 @@ $ bootctl --path=/boot install
 Add config to `/boot/loader/loader.conf`:
 
 ```shell
-default arch
-timeout 5
-editor  0
+default       arch
+timeout	      5
+editor	      0
+console-mode  max
 ```
 
 Set `editor 0` to ensure the configuration can't be changed on boot
