@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-theme
-pkgver=1.0.1
+pkgver=1.0.3
 pkgrel=1
 pkgdesc="Theme configuration for ethanify systems"
 arch=('any')
@@ -10,7 +10,6 @@ depends=(
   'breeze-gtk'
   'breeze-icons'
   'noto-fonts-cjk'
-  'noto-fonts-emoji'
   'otf-latin-modern'
   'otf-latinmodern-math'
   'terminus-font'
@@ -23,6 +22,7 @@ depends=(
   'otf-stix'
   'phinger-cursors'
   'ttf-indic-otf'
+  'ttf-whatsapp-emoji'
 
   # Custom dependencies
   'otf-operator-mono-lig-nerd'
