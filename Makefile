@@ -33,7 +33,7 @@ $(META_PACKAGES):
 aur:
 	@$(YAY) \
 		gotop-bin pass-attr pass-clip pass-extension-tail pass-git pass-update yay zoxide \
-		browserpass-chrome dropbox fcitx5-breeze google-chrome megasync-bin \
+		browserpass-chrome dropbox fcitx5-breeze megasync-bin \
 		nomachine postman-bin slack-desktop spotify webtorrent-cli \
 		1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade \
 		grpcurl jdtls kotlin-language-server libffi7 lua-language-server \
@@ -47,6 +47,9 @@ fonts: $(FONTS)
 
 $(FONTS):
 	@cd fonts/$@; $(MAKEPKG) --asdeps
+
+google-chrome-97:
+	@cd utils/$@; $(MAKEPKG) --asdeps
 
 clean:
 	@git clean -xd --force
