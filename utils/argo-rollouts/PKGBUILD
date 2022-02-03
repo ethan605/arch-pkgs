@@ -1,0 +1,23 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=argo-rollouts
+pkgver=1.1.1
+pkgrel=1
+pkgdesc="Kubectl Argo Rollouts Plugin"
+arch=('any')
+url="https://github.com/argoproj/argo-rollouts"
+license=('Apache 2.0')
+depends=()
+_host="https://github.com/argoproj/argo-rollouts/releases/download"
+_bin="kubectl-argo-rollouts"
+
+source=(
+  "${_bin}::${_host}/v${pkgver}/${_bin}-linux-amd64"
+)
+
+sha512sums=(
+  "385e865e3d8d3ed8d1bf1bb4d786257c0722c2c615148177ab00b35ad303fbf17c203075d3dd51d63559a5daadc1c40c210fea8fe4ac4026e8a48c2d9c69b4f1"
+)
+
+package() {
+  install -Dm755 -t "$pkgdir/usr/bin" "${_bin}"
+}

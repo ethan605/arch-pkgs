@@ -4,6 +4,8 @@
 *.ttf
 /**/pkg/
 /**/src/
+/utils/argo-rollouts/kubectl-argo-rollouts*
+/utils/google-chrome-97/*.deb
 /utils/qrgpg/qrgpg
 
 # Keeps

@@ -5,10 +5,7 @@ META_PACKAGES = base devel sway theme desktop
 SYSTEMCTL = sudo systemctl enable --now
 FLATPAK_APPS = us.zoom.Zoom
 FONTS = otf-operator-mono-lig-nerd
-
-# Post-install targets
-qrgpg:
-	@cd utils/qrgpg; $(MAKEPKG) --asdeps
+UTILS = qrgpg argo-rollouts google-chrome-97
 
 yay:
 	@rm -rf /tmp/yay
@@ -26,7 +23,6 @@ nvim:
 		"$(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim"; \
 		nvim +PackerInstall
 
-# Package manager targets
 $(META_PACKAGES): 
 	@cd ethanify-$@; $(MAKEPKG)
 
@@ -48,7 +44,7 @@ fonts: $(FONTS)
 $(FONTS):
 	@cd fonts/$@; $(MAKEPKG) --asdeps
 
-google-chrome-97:
+$(UTILS):
 	@cd utils/$@; $(MAKEPKG) --asdeps
 
 clean:
