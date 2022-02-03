@@ -66,7 +66,7 @@ Number  Start (sector)    End (sector)  Size       Code  Name
    3         1128448             ...   ... GiB     8309  cryptlvm
 ```
 
-### Setup [LUKS on LVM](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#LUKS_on_LVM)
+### Setup [LVM on LUKS](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#LVM_on_LUKS)
 
 ```shell
 $ cryptsetup luksFormat /dev/disk/by-partlabel/cryptlvm
