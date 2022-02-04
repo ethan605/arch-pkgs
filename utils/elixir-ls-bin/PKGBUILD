@@ -1,0 +1,29 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=elixir-ls-bin
+pkgver=0.9.0
+pkgrel=1
+pkgdesc="Elixir Language Server"
+arch=('any')
+url="https://github.com/elixir-lsp/elixir-ls"
+license=('Apache 2.0')
+depends=()
+conflicts=(
+  'elixir-ls'
+  'elixir-ls-git'
+)
+_host="https://github.com/elixir-lsp/elixir-ls/releases/download"
+_bin="elixir-ls"
+
+source=(
+  "${_bin}.zip::${_host}/v${pkgver}/${_bin}.zip"
+)
+
+sha512sums=(
+  "344529fff3a8ba0f1f7bb337318cc2aab7c053973677fa8bb78f22be476b0029060920f8bae1d14ba2a506945d3192898d5c1593ed932f862c37ce5ea5cc73fd"
+)
+
+package() {
+  mkdir -p "$pkgdir/usr/lib/${_bin}"
+  cd "$srcdir"
+  cp *.ez *.sh "$pkgdir/usr/lib/${_bin}"
+}

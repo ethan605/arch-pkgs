@@ -5,6 +5,7 @@
 /**/pkg/
 /**/src/
 /utils/argo-rollouts/kubectl-argo-rollouts*
+/utils/elixir-ls-bin/*.zip
 /utils/google-chrome-97/*.deb
 /utils/qrgpg/qrgpg
 
