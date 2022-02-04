@@ -426,9 +426,18 @@ $ make zsh
 ```shell
 $ systemctl start bluetooth docker
 $ systemctl --user start mpd syncthing
+$ sudo gpasswd -a ethanify docker
 ```
 
 ### Full packages
+
+Add GPG keys:
+
+```shell
+$ gpg --recv-keys \
+  3FEF9748469ADBE15DA7CA80AC2D62742012EA22 \
+  BE2DBCF2B1E3E588AC325AEAA06B49470F8E620A
+```
 
 ```shell
 $ cd arch-pkgs
