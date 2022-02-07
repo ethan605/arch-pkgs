@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.4
+pkgver=1.0.5
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -32,6 +32,7 @@ depends=(
   'timidity++'
   'virt-manager'
   'wf-recorder'
+  'wireguard-tools'
   'zathura-pdf-mupdf'
 
   # AUR dependencies
@@ -41,6 +42,7 @@ depends=(
   'google-chrome'
   'megasync-bin'
   'nomachine'
+  'nordvpn-bin'
   'postman-bin'
   'slack-desktop'
   'spotify'
