@@ -471,6 +471,29 @@ $ systemctl --user status pipewire xdg-desktop-portal xdg-desktop-portal-wlr
 
 Open `google-chrome` & enable `enable-webrtc-pipewire-capturer` in `chrome://flags`
 
+### [NordVPN](https://wiki.archlinux.org/title/NordVPN)
+
+```shell
+$ device=$(/usr/bin/ls /sys/class/ieee80211/*/device/net)
+
+# Disable IPv6
+$ nmcli dev mod $device ipv6.method disabled
+
+# Disable auto DNS & add NordVPN DNSes
+$ nmcli dev mod $device ipv4.ignore-auto-dns yes
+$ nmcli dev mod $device ipv4.dns "103.86.96.100 103.86.99.100"
+
+$ groupadd -r nordvpn
+$ gpasswd -a $USER nordvpn
+$ systemctl enable nordvpnd
+# Logout & login again
+
+$ nordvpn login
+$ nordvpn set technology nordlynx
+$ nordvpn set notify enable
+$ nordvpn whitelist add subnet 192.168.1.0/24
+```
+
 ## 4. Troubleshooting
 
 In case of system malfunctions (eg. boot corrupted, network not working),
