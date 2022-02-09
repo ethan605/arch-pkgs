@@ -1,5 +1,51 @@
 # Arch Linux installation guide - Jan 2022
 
+* [0. Preparation](#0.-preparation)
+  - [Connect to internet](#connect-to-internet)
+    - [Ethernet](#ethernet)
+    - [Wifi](#wifi)
+  - [Console font](#console-font)
+  - [Update the system clock](#update-the-system-clock)
+* [1. Partition disk & setup LUKS](#1.-partition-disk-%26-setup-luks)
+  - [Partition the disk](#partition-the-disk)
+  - [Setup LVM on LUKS](#setup-lvm-on-luks)
+  - [Preparing logical volumes](#preparing-logical-volumes)
+  - [Format logical volumes and mount](#format-logical-volumes-and-mount)
+  - [Format and mount EFI partition](#format-and-mount-efi-partition)
+* [2. Installation](#2.-installation)
+  - [Bootstrap packages](#bootstrap-packages)
+  - [Generate and update `fstab`](#generate-and-update-fstab)
+  - [Change root](#change-root)
+  - [Configure date time & locale](#configure-date-time-%26-locale)
+  - [Configure `hostname`](#configure-hostname)
+  - [`initramfs`](#initramfs)
+    - [Add `encrypt` and `lvm2` to hooks](#add-encrypt-and-lvm2-to-hooks)
+    - [Create `initramfs` image](#create-initramfs-image)
+  - [`systemd-boot`](#systemd-boot)
+  - [Install & enable NetworkManager](#install-%26-enable-networkmanager)
+  - [Set console font](#set-console-font)
+  - [Set `root` password](#set-root-password)
+  - [Reboot](#reboot)
+* [3. Post installation](#3.-post-installation)
+  - [Secure boot](#secure-boot)
+  - [Sign in as `root` and install related tools](#sign-in-as-root-and-install-related-tools)
+  - [Generate new keys](#generate-new-keys)
+  - [Sign keys](#sign-keys)
+  - [Setup `pacman` hooks](#setup-pacman-hooks)
+  - [Enrolling keys in firmware](#enrolling-keys-in-firmware)
+    - [Notes for Intel NUCs](#notes-for-intel-nucs)
+  - [Configure users](#configure-users)
+    - [Configure `sudo`](#configure-sudo)
+    - [Add new user](#add-new-user)
+  - [GPG key](#gpg-key)
+  - [`chezmoi`, SSH key and `pass`](#chezmoi%2C-ssh-key-%26-pass)
+  - [`sway` and base packages](#sway-%26-base-packages)
+  - [Enable services](#enable-services)
+  - [Full packages](#full-packages)
+  - [Screen sharing](#screen-sharing)
+  - [NordVPN](#nordvpn)
+* [4. Troubleshooting](#4.-troubleshooting)
+
 ## 0. Preparation
 
 ### Connect to internet
@@ -16,7 +62,7 @@ Follow the [offical instructions](https://wiki.archlinux.org/index.php/Iwd#Conne
 $ ping archlinux.org
 ```
 
-#### Console font
+### Console font
 
 ```shell
 $ setfont ter-v22n
@@ -132,7 +178,7 @@ $ lsblk
 $ pacstrap /mnt base linux linux-firmware intel-ucode lvm2 neovim
 ```
 
-### Generate and update fstab
+### Generate and update `fstab`
 
 ```shell
 $ genfstab -U /mnt >> /mnt/etc/fstab
@@ -165,7 +211,7 @@ $ locale-gen
 $ echo "LANG=en_GB.UTF-8" > /etc/locale.conf
 ```
 
-### Configure hostname
+### Configure `hostname`
 
 ```shell
 $ echo "arch" > /etc/hostname
@@ -174,7 +220,7 @@ $ echo "::1 localhost" >> /etc/hosts
 $ echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 ```
 
-### Initramfs
+### `initramfs`
 
 #### Add `encrypt` and `lvm2` to HOOKS
 
@@ -183,7 +229,7 @@ $ echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 HOOKS=(base udev autodetect modconf block encrypt lvm2 filesystems keyboard fsck)
 ```
 
-#### Create initramfs image:
+#### Create `initramfs` image
 
 ```shell
 $ mkinitcpio -p linux
@@ -191,7 +237,7 @@ $ ls -lah /boot
 # should contain "initramfs-linux-fallback.img", "initramfs-linux.img", "intel-ucode.img" and "vmlinuz-linux"
 ```
 
-### Systemd-boot
+### `systemd-boot`
 
 Install boot loader:
 
@@ -247,7 +293,7 @@ $ echo "FONT=ter-v22n" > /etc/vconsole.conf
 $ echo "FONT_MAP=8859-2" >> /etc/vconsole.conf
 ```
 
-### Set root password
+### Set `root` password
 
 ```shell
 $ passwd
@@ -383,7 +429,7 @@ $ gpg --edit-key thanhnx.605@gmail.com
 # follow https://www.gnupg.org/gph/en/manual/x334.html
 ```
 
-### Chezmoi, SSH key & Pass
+### `chezmoi`, SSH key & `pass`
 
 ```shell
 $ sudo pacman -S --asdeps chezmoi
@@ -404,7 +450,7 @@ $ git push -u origin main
 $ chezmoi apply
 ```
 
-### Sway & base packages
+### `sway` & base packages
 
 ```shell
 $ cd arch-pkgs
@@ -421,12 +467,12 @@ $ make nvim
 $ make zsh
 ```
 
-### Systemd services
+### Enable services
 
 ```shell
 $ systemctl start bluetooth docker
 $ systemctl --user start mpd syncthing
-$ sudo gpasswd -a ethanify docker
+$ sudo gpasswd -a $USER docker
 ```
 
 ### Full packages
