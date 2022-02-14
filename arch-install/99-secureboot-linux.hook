@@ -1,4 +1,4 @@
-# /etc/pacman.d/hooks/99-secureboot.hook
+# /etc/pacman.d/hooks/99-secureboot-linux.hook
 
 [Trigger]
 Operation = Install
