@@ -7,6 +7,7 @@
 /utils/argo-rollouts/kubectl-argo-rollouts*
 /utils/elixir-ls-bin/*.zip
 /utils/google-chrome-97/*.deb
+/utils/jless/*.zip
 /utils/qrgpg/qrgpg
 
 # Keeps
