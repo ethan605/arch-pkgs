@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.5
+pkgver=1.0.6
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -28,7 +28,6 @@ depends=(
   'pulseaudio-bluetooth'
   'solaar'
   'telegram-desktop'
-  'thunderbird'
   'timidity++'
   'virt-manager'
   'wf-recorder'
