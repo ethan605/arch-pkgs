@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.4
+pkgver=1.0.5
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -14,6 +14,9 @@ depends=(
   'intel-ucode'
   'linux'
   'linux-firmware'
+  'linux-headers'
+  'linux-lts'
+  'linux-lts-headers'
   'networkmanager'
   'sbsigntools'
 
