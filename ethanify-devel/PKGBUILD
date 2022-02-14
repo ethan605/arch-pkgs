@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.6
+pkgver=1.0.7
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -52,4 +52,5 @@ depends=(
   # Custom dependencies
   'argo-rollouts'
   'elixir-ls-bin'
+  'jless'
 )
