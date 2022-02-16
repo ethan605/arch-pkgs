@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.6
+pkgver=1.0.7
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -26,6 +26,8 @@ depends=(
   'net-tools'
   'pavucontrol'
   'pulseaudio-bluetooth'
+  'qt5-wayland'
+  'qutebrowser'
   'solaar'
   'telegram-desktop'
   'timidity++'
