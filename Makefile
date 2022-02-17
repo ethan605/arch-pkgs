@@ -29,8 +29,8 @@ $(META_PACKAGES):
 aur:
 	@$(YAY) \
 		gotop-bin pass-attr pass-clip pass-extension-tail pass-git pass-update yay zoxide \
-		browserpass-chrome dropbox fcitx5-breeze megasync-bin \
-		nomachine nordvpn-bin postman-bin slack-desktop spotify webtorrent-cli \
+		browserpass-chrome dropbox fcitx5-breeze google-chrome megasync-bin nomachine \
+		nordvpn-bin postman-bin slack-desktop spotify webtorrent-cli \
 		1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade \
 		grpcurl jdtls kotlin-language-server libffi7 lua-language-server \
 		breeze-snow-cursor-theme otf-stix phinger-cursors ttf-indic-otf ttf-whatsapp-emoji \
