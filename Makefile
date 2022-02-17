@@ -34,7 +34,7 @@ aur:
 		1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade \
 		grpcurl jdtls kotlin-language-server libffi7 lua-language-server \
 		breeze-snow-cursor-theme otf-stix phinger-cursors ttf-indic-otf ttf-whatsapp-emoji \
-		clipman foot j4-dmenu-desktop swappy-git swaylock-effects-git waypipe wev
+		clipman foot j4-dmenu-desktop swappy-git swaylock-effects-git tessen waypipe wev
 
 flatpak:
 	@flatpak install flathub @$(FLATPAK_APPS)

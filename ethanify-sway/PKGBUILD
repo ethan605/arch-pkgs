@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-sway
-pkgver=1.0.2
+pkgver=1.0.3
 pkgrel=1
 pkgdesc="Sway configuration for ethanify systems"
 arch=('any')
@@ -28,6 +28,7 @@ depends=(
   'j4-dmenu-desktop'
   'swappy-git'
   'swaylock-effects-git'
+  'tessen'
   'waypipe'
   'wev'
 )
