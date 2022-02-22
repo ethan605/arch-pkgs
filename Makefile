@@ -5,7 +5,7 @@ META_PACKAGES = base devel sway theme desktop i3
 SYSTEMCTL = sudo systemctl enable --now
 FLATPAK_APPS = us.zoom.Zoom
 FONTS = otf-operator-mono-lig-nerd
-UTILS = qrgpg argo-rollouts elixir-ls-bin jless google-chrome-97
+UTILS = qrgpg argo-rollouts elixir-ls-bin
 
 yay:
 	@rm -rf /tmp/yay
@@ -32,7 +32,7 @@ aur:
 		browserpass-chrome dropbox fcitx5-breeze google-chrome megasync-bin \
 		nordvpn-bin postman-bin slack-desktop spotify webtorrent-cli \
 		1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade \
-		grpcurl jdtls kotlin-language-server libffi7 lua-language-server \
+		grpcurl jdtls jless kotlin-language-server libffi7 lua-language-server \
 		breeze-snow-cursor-theme otf-stix phinger-cursors ttf-indic-otf ttf-whatsapp-emoji \
 		clipman foot j4-dmenu-desktop swappy-git swaylock-effects-git tessen waypipe wev
 

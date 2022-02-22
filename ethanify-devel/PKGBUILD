@@ -45,6 +45,7 @@ depends=(
   'downgrade'
   'grpcurl'
   'jdtls'
+  'jless'
   'kotlin-language-server'
   'libffi7'
   'lua-language-server'
@@ -52,5 +53,4 @@ depends=(
   # Custom dependencies
   'argo-rollouts'
   'elixir-ls-bin'
-  'jless'
 )
