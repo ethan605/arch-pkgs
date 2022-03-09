@@ -13,7 +13,7 @@ depends=(
 )
 _host="https://gist.githubusercontent.com/ethan605/"
 _gistid="b6888f3c0e12e4f8168baf97f2164750"
-_version="a600d14bac274bc0ec02f04972b742690daaad82"
+_version="7e3d244cb565220c8270a7a3bd667c8199c27911"
 _bin="qrgpg"
 
 source=(
@@ -21,7 +21,7 @@ source=(
 )
 
 sha512sums=(
-  "6db92550fd370be064e4b9198a3d57c64be4119fd34d7c4fbc66e33ab4c10a75dbf06b492809c5776d100ae93205104a69a7138d5a91f1baa8889d49833464bc"
+  "93c6ffe52259a35114e5538265aad018952f3b29860ac4c3fa225aeea32455837fa04d6e19245bf5151eac04fe01d751c3b39ab88d0962df0c85b8ca7001e510"
 )
 
 package() {
