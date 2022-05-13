@@ -5,7 +5,7 @@
 # Contributor: ethanify <xtnguyen605@gmail.com>
 
 pkgname=httpie
-pkgver=3.1.0
+pkgver=3.2.1
 pkgrel=1
 pkgdesc="human-friendly CLI HTTP client for the API era"
 url="https://github.com/httpie/httpie"
@@ -22,7 +22,7 @@ replaces=(python-httpie python2-httpie)
 license=('BSD')
 arch=('any')
 source=($pkgname-$pkgver.tar.gz::"https://github.com/httpie/httpie/archive/$pkgver.tar.gz")
-sha512sums=('6b018ee7b98f828da5017826061c05e40604914522c822a29758778ee0472235760400d3d5c7b14bfafad7c46774064a02566b47555850a0e3ecbd6dcb426899')
+sha512sums=('ffcf6050138c49d5acb01f214d9b3fee6c78502c4c6dc45a295bafc88aafd1789f97a69c922f6e093fb48a402c1f83a7fff5307849130df81c4bcb2d595a03bf')
 
 build() {
   cd $pkgname-$pkgver
