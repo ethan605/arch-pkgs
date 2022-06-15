@@ -127,7 +127,7 @@ $ lsblk
 
 ### Preparing logical volumes
 
-Use 8GB for `swap`, 32GB for `/root` and
+Use 8GB for `swap`, 64GB (or more) for `/root` and
 [a dedicated `/home` partition](https://askubuntu.com/questions/142695/what-are-the-pros-and-cons-of-having-a-separate-home-partition/142704#142704)
 
 ```shell
@@ -135,7 +135,7 @@ $ pvcreate /dev/mapper/cryptlvm
 $ vgcreate vg /dev/mapper/cryptlvm
 
 $ lvcreate -L 8G vg -n swap
-$ lvcreate -L 32G vg -n root
+$ lvcreate -L 64G vg -n root
 $ lvcreate -l 100%FREE vg -n home
 
 $ lsblk
