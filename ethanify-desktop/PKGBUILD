@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.14
+pkgver=1.0.15
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -29,6 +29,7 @@ depends=(
   'python-adblock'
   'qt5-wayland'
   'qutebrowser'
+  'signal-desktop'
   'solaar'
   'telegram-desktop'
   'timidity++'
