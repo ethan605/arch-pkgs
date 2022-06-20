@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.15
+pkgver=1.0.16
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -16,6 +16,7 @@ depends=(
   'fcitx5-gtk'
   'fcitx5-unikey'
   'firefox'
+  'flameshot'
   'geary'
   'hplip'
   'kdeconnect'
