@@ -16,12 +16,20 @@ zsh:
 	@chsh -s /usr/bin/zsh
 	# For zsh's site-functions
 	@sudo mkdir -p /usr/local/share/zsh; \
-		sudo chown $(USER):users /usr/local/share/zsh
+		sudo chown $(USER):users /usr/local/share/zsh; \
+		curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 
 nvim:
 	@git clone https://github.com/wbthomason/packer.nvim \
 		"$(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim"; \
 		nvim +PackerInstall
+
+misc:
+	@mkdir -p "$(HOME)/.logs"; \
+		touch "$(HOME)/.tool-versions"; \
+		gpg --recv-keys \
+			3FEF9748469ADBE15DA7CA80AC2D62742012EA22 \
+			BE2DBCF2B1E3E588AC325AEAA06B49470F8E620A
 
 $(META_PACKAGES): 
 	@cd ethanify-$@; $(MAKEPKG)
@@ -35,6 +43,16 @@ aur:
 		grpcurl jdtls jless kotlin-language-server libffi7 ltex-ls-bin lua-language-server \
 		breeze-snow-cursor-theme otf-stix phinger-cursors ttf-indic-otf ttf-whatsapp-emoji \
 		clipman j4-dmenu-desktop swappy-git swaylock-effects-git tessen waypipe wev
+
+core:
+	@sudo pacman -S --asdeps direnv exa fzf git-delta keychain \
+		openssh pass polkit starship zoxide zsh; \
+		yay -S --asdeps asdf-vm 
+
+sway-base:
+	@sudo pacman -S --asdeps bemenu-wayland firefox foot \
+		sway swaybg swayidle waybar wl-clipboard wofi; \
+		yay -S --asdeps j4-dmenu-desktop swaylock-effects-git
 
 flatpak:
 	@flatpak install flathub @$(FLATPAK_APPS)

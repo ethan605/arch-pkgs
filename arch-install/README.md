@@ -1,6 +1,6 @@
 # Arch Linux installation guide - Jan 2022
 
-* [0. Preparation](#0.-preparation)
+* [0. Preparation](#0-preparation)
   - [Connect to internet](#connect-to-internet)
     - [Ethernet](#ethernet)
     - [Wifi](#wifi)
@@ -62,10 +62,16 @@ Follow the [offical instructions](https://wiki.archlinux.org/index.php/Iwd#Conne
 $ ping archlinux.org
 ```
 
-### Console font
+### [Console font](https://wiki.archlinux.org/title/Linux_console#Fonts)
 
 ```shell
-$ setfont ter-v22n
+$ setfont ter-v22n  # or ter-v32n on high-res screens
+```
+
+For the comprehensive list of available fonts:
+
+```shell
+$ ls /usr/share/kbd/consolefonts
 ```
 
 ### [Update the system clock](https://wiki.archlinux.org/index.php/installation_guide#Update_the_system_clock)
@@ -109,7 +115,7 @@ Partition table scan:
 
 Number  Start (sector)    End (sector)  Size       Code  Name
    1            2048         1128447   550.0 MiB   EF00  EFI
-   3         1128448             ...   ... GiB     8309  cryptlvm
+   2         1128448             ...   ... GiB     8309  cryptlvm
 ```
 
 ### Setup [LVM on LUKS](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#LVM_on_LUKS)
@@ -122,7 +128,7 @@ $ cryptsetup open /dev/disk/by-partlabel/cryptlvm cryptlvm
 # type passphrase to open
 
 $ lsblk
-# "cryptlvm" mapper will be revealed under the 3rd partition in $DISK
+# "cryptlvm" mapper will be revealed under the last partition in $DISK
 ```
 
 ### Preparing logical volumes
@@ -167,7 +173,7 @@ $ mkdir /mnt/boot
 $ mount /dev/disk/by-partlabel/EFI /mnt/boot
 
 $ lsblk
-# "/mnt/boot" displayed in "MOUNTPOINTS" for the 2nd partition
+# "/mnt/boot" displayed in "MOUNTPOINTS" for the 1st partition
 ```
 
 ## 2. Installation
@@ -189,10 +195,10 @@ Change `relatime` to `noatime` for `root` and `home` volumes
 ```shell
 # /mnt/etc/fstab
 # /dev/mapper/vg-root
-UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx / ext4 rw,noatime 0 1
+UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx   /       ext4    rw,noatime    0 1
 
 # /dev/mapper/vg-home
-UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx / ext4 rw,noatime 0 1
+UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx   /home   ext4    rw,noatime    0 2
 ```
 
 ### Change root
@@ -334,8 +340,8 @@ $ mv GUID.txt db.* KEK.* PK.* /root/sbkeys
 
 ```shell
 $ cd /boot
-$ sbsign --key db.key --cert db.crt --output vmlinuz-linux vmlinuz-linux
-$ sbsign --key db.key --cert db.crt --output EFI/BOOT/BOOTX64.EFI EFI/BOOT/BOOTX64.EFI
+$ sbsign --key /root/sbkeys/db.key --cert /root/sbkeys/db.crt --output vmlinuz-linux vmlinuz-linux
+$ sbsign --key /root/sbkeys/db.key --cert /root/sbkeys/db.crt --output EFI/BOOT/BOOTX64.EFI EFI/BOOT/BOOTX64.EFI
 ```
 
 #### Setup `pacman` hooks
@@ -359,25 +365,23 @@ Use [`sbkeysync`](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_I
 ```shell
 $ mkdir -p /etc/secureboot/keys/{db,KEK,PK}
 
+# Copy .auth files to the new folders
+$ cp /roots/sbkeys/db.auth /etc/secureboot/keys/db/
+$ cp /roots/sbkeys/KEK.auth /etc/secureboot/keys/KEK/
+$ cp /roots/sbkeys/PK.auth /etc/secureboot/keys/PK/
+
+# Verify
+$ ls /etc/secureboot/keys/*
+
 # Verify with dry-run
 $ sbkeysync --pk --dry-run --verbose
 
-# Enroll keys - KEK & db first
+# Enroll keys - db & KEK first
 $ sbkeysync --verbose
 
 # Enroll keys - PK last
 $ sbkeysync --verbose --pk
 ```
-
-In case of write errors, temporarily change firmware attrs:
-
-```shell
-$ chattr -i /sys/firmware/efi/efivars/{PK,KEK,db}*
-```
-
-Reboot to BIOS to check the firmware being back to "User" mode,
-then reboot to Arch Linux to verify
-[secure boot status](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#After_booting_the_OS).
 
 #### Notes for Intel NUCs
 
@@ -385,6 +389,26 @@ then reboot to Arch Linux to verify
   hence the option of [using firmware setup utility](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Using_firmware_setup_utility) is not feasible.
 * After Secure Boot is successfully set, boot options like "F2 to Enter Setup" and
   "F10 to Enter Boot Menu" might disappear but pressing those keys should still work.
+
+#### Notes for Lenovo Thinkpad X1 Carbon G9
+
+* Enrolling db & KEK with `sbkeysync --verbose` might end up with `Operation not permitted`. Run:
+
+```shell
+$ chattr -i /sys/firmware/efi/efivars/{db,KEK}*
+```
+
+and re-enroll.
+
+* Enrolling PK with `sbkeysync --pk --verbose` might end up with `Permission denied`. Use instead:
+
+```shell
+$ efi-updatevar -f /etc/secureboot/keys/PK/PK.auth PK
+```
+
+Reboot to BIOS to check the firmware being back to "User" mode,
+then reboot to Arch Linux to verify
+[secure boot status](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#After_booting_the_OS).
 
 ### Configure users
 
@@ -439,14 +463,13 @@ $ chezmoi apply ~/.ssh
 
 $ eval $(ssh-agent)
 $ ssh-add ~/.ssh/id_ed25519
-# enter passphrase
+# enter passphrase from dotfiles/ssh in pass
 
 $ git clone git@github.com:ethan605/<password-store-repo>.git ~/.password-store
 
 $ chezmoi cd
-$ git remote remove origin
-$ git remote add origin git@github.com:ethan605/dotfiles.git
-$ git push -u origin main
+$ git remote set-url origin git@github.com:ethan605/dotfiles.git
+$ git remote set-url --push origin git@github.com:ethan605/dotfiles.git
 $ chezmoi apply
 ```
 
@@ -455,24 +478,19 @@ $ chezmoi apply
 ```shell
 $ cd arch-pkgs
 
+# For AUR packages
 $ make yay
 
-$ pacman -S --asdeps sway waybar firefox
-$ yay -S --asdeps foot
-$ chezmoi apply ~/.config
-$ mkdir -p ~/.logs
-# logout and login again to boot into sway
+# Essential tools
+$ make core
 
+# For Sway
+$ make sway
 $ make nvim
 $ make zsh
-```
+$ make misc
 
-### Enable services
-
-```shell
-$ systemctl start bluetooth docker
-$ systemctl --user start mpd syncthing
-$ sudo gpasswd -a $USER docker
+# logout and login again to boot into sway
 ```
 
 ### Full packages
@@ -503,6 +521,14 @@ Add metapackages to ignore list of `pacman.conf`:
 ```shell
 # /etc/pacman.conf
 IgnorePkg   = ethanify-base  ethanify-desktop  ethanify-devel  ethanify-sway  ethanify-theme  otf-operator-mono-lig-nerd
+```
+
+### Enable services
+
+```shell
+$ systemctl start bluetooth docker
+$ systemctl --user start mpd syncthing
+$ sudo gpasswd -a $USER docker
 ```
 
 ### Screen sharing
