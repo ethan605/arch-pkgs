@@ -37,9 +37,12 @@ $(META_PACKAGES):
 aur-base:
 	@$(YAY) gotop-bin pass-attr pass-clip pass-extension-tail pass-update
 
+aur-desktop:
+	@$(YAY) fcitx5-breeze postman-bin webtorrent-cli
+
 aur-devel:
 	@$(YAY) 1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade grpcurl jdtls \
-		jless kotlin-language-server libffi7 ltex-ls-bin lua-language-server
+		kotlin-language-server libffi7 ltex-ls-bin lua-language-server
 
 aur-theme:
 	@$(YAY) breeze-snow-cursor-theme otf-stix phinger-cursors ttf-indic-otf ttf-whatsapp-emoji

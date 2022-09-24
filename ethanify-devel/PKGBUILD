@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.9
+pkgver=1.0.10
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -8,8 +8,6 @@ url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
   # Dependencies from base-devel
-  'git-delta'
-  'git-lfs'
   'make'
   'openssl-1.0'
   'patch'
@@ -23,10 +21,13 @@ depends=(
   'docker'
   'docker-compose'
   'edk2-ovmf'
+  'git-delta'
+  'git-lfs'
   'go'
   'gradle'
   'helm'
   'httpie'
+  'jless'
   'k9s'
   'kubectx'
   'lua'
@@ -44,7 +45,6 @@ depends=(
   'downgrade'
   'grpcurl'
   'jdtls'
-  'jless'
   'kotlin-language-server'
   'libffi7'
   'ltex-ls-bin'
