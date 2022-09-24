@@ -47,6 +47,9 @@ aur-devel:
 aur-theme:
 	@$(YAY) breeze-snow-cursor-theme otf-stix phinger-cursors ttf-indic-otf ttf-whatsapp-emoji
 
+aur-sway:
+	@$(YAY) clipman j4-dmenu-desktop swappy-git swaylock-effects-git tessen waypipe wev
+
 core:
 	@sudo pacman -S --asdeps direnv exa fzf git-delta keychain \
 		openssh pass polkit starship zoxide zsh; \

@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-sway
-pkgver=1.0.3
+pkgver=1.0.4
 pkgrel=1
 pkgdesc="Sway configuration for ethanify systems"
 arch=('any')
@@ -12,6 +12,7 @@ depends=(
   'foot'
   'grim'
   'imv'
+  'libqalculate'
   'mako'
   'qalculate-gtk'
   'slurp'
