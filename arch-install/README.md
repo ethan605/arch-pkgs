@@ -481,11 +481,9 @@ $ cd arch-pkgs
 # For AUR packages
 $ make yay
 
-# Essential tools
+# Minimal packages to boot into Sway
 $ make core
-
-# For Sway
-$ make sway
+$ make sway-base
 $ make nvim
 $ make zsh
 $ make misc
@@ -506,13 +504,25 @@ $ gpg --recv-keys \
 ```shell
 $ cd arch-pkgs
 
-$ make aur
 $ make fonts
-$ make theme
+
+$ make aur-base
 $ make base
+
+$ make aur-theme
+$ make theme
+
+$ make aur-devel
 $ make devel
-$ make sway
+
+$ make aur-desktop
 $ make desktop
+
+$ make aur-sway
+$ make sway
+
+# Other metapackages if necessary
+
 $ make flatpak
 ```
 
@@ -520,7 +530,7 @@ Add metapackages to ignore list of `pacman.conf`:
 
 ```shell
 # /etc/pacman.conf
-IgnorePkg   = ethanify-base  ethanify-desktop  ethanify-devel  ethanify-sway  ethanify-theme  otf-operator-mono-lig-nerd
+IgnorePkg   = ethanify-base ethanify-desktop ethanify-devel ethanify-sway ethanify-theme ... otf-operator-mono-lig-nerd
 ```
 
 ### Enable services
