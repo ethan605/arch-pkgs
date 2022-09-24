@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.7
+pkgver=1.0.8
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -10,7 +10,6 @@ depends=(
   # From installation steps
   'base'
   'efitools'
-  'grub'
   'intel-ucode'
   'linux'
   'linux-firmware'
@@ -48,15 +47,14 @@ depends=(
   'vifm'
   'zip'
   'zsh'
+  'zoxide'
 
   # AUR dependencies
   'gotop-bin'
   'pass-attr'
   'pass-clip'
   'pass-extension-tail'
-  'pass-git'
   'pass-update'
   'yay'
-  'zoxide'
 )
 

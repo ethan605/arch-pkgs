@@ -36,7 +36,7 @@ $(META_PACKAGES):
 
 aur:
 	@$(YAY) \
-		gotop-bin pass-attr pass-clip pass-extension-tail pass-git pass-update yay zoxide \
+		gotop-bin pass-attr pass-clip pass-extension-tail pass-update yay \
 		browserpass-chrome dropbox fcitx5-breeze google-chrome megasync-bin \
 		nordvpn-bin postman-bin slack-desktop spotify webtorrent-cli \
 		1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade \
