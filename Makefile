@@ -1,7 +1,7 @@
 SHELL = /bin/bash
 YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit None --answerupgrade None
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
-META_PACKAGES = base devel sway theme desktop i3
+META_PACKAGES = base devel sway theme desktop personal thinkpad
 SYSTEMCTL = sudo systemctl enable --now
 FLATPAK_APPS = us.zoom.Zoom
 FONTS = otf-operator-mono-lig-nerd
@@ -46,6 +46,9 @@ aur-devel:
 
 aur-theme:
 	@$(YAY) breeze-snow-cursor-theme otf-stix phinger-cursors ttf-indic-otf ttf-whatsapp-emoji
+
+aur-personal:
+	@$(YAY) browserpass-chrome dropbox google-chrome megasync-bin nordvpn-bin
 
 aur-sway:
 	@$(YAY) clipman j4-dmenu-desktop swappy-git swaylock-effects-git tessen waypipe wev

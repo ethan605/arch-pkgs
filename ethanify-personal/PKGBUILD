@@ -1,0 +1,21 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=ethanify-personal
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Non-work configuration for ethanify systems"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+depends=(
+  'kdeconnect'
+  'signal-desktop'
+  'wireguard-tools'
+
+  # AUR dependencies
+  'browserpass-chrome'
+  'dropbox'
+  'google-chrome'
+  'megasync-bin'
+  'nordvpn-bin'
+)
+
