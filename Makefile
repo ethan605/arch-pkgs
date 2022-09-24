@@ -1,5 +1,5 @@
 SHELL = /bin/bash
-YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit None --answerupgrade None --clean
+YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit None --answerupgrade None
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
 META_PACKAGES = base devel sway theme desktop i3
 SYSTEMCTL = sudo systemctl enable --now
@@ -34,15 +34,15 @@ misc:
 $(META_PACKAGES): 
 	@cd ethanify-$@; $(MAKEPKG)
 
-aur:
-	@$(YAY) \
-		gotop-bin pass-attr pass-clip pass-extension-tail pass-update yay \
-		browserpass-chrome dropbox fcitx5-breeze google-chrome megasync-bin \
-		nordvpn-bin postman-bin slack-desktop spotify webtorrent-cli \
-		1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade \
-		grpcurl jdtls jless kotlin-language-server libffi7 ltex-ls-bin lua-language-server \
-		breeze-snow-cursor-theme otf-stix phinger-cursors ttf-indic-otf ttf-whatsapp-emoji \
-		clipman j4-dmenu-desktop swappy-git swaylock-effects-git tessen waypipe wev
+aur-base:
+	@$(YAY) gotop-bin pass-attr pass-clip pass-extension-tail pass-update
+
+aur-devel:
+	@$(YAY) 1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade grpcurl jdtls \
+		jless kotlin-language-server libffi7 ltex-ls-bin lua-language-server
+
+aur-theme:
+	@$(YAY) breeze-snow-cursor-theme otf-stix phinger-cursors ttf-indic-otf ttf-whatsapp-emoji
 
 core:
 	@sudo pacman -S --asdeps direnv exa fzf git-delta keychain \
