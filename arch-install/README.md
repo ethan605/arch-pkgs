@@ -34,9 +34,12 @@
     - [Setup `pacman` hooks](#setup-pacman-hooks)
     - [Enrolling keys in firmware](#enrolling-keys-in-firmware)
     - [Notes for Intel NUCs](#notes-for-intel-nucs)
+    - [Notes for Intel NUCs](#notes-for-intel-nucs)
+    - [Notes for Lenovo Thinkpad X1 Carbon G9](#notes-for-lenovo-thinkpad-x1-carbon-g9)
   - [Configure users](#configure-users)
     - [Configure `sudo`](#configure-sudo)
     - [Add new user](#add-new-user)
+    - [Configure `fprintd` (if applicable)](#configure-fprintd-if-applicable)
   - [GPG key](#gpg-key)
   - [`chezmoi`, SSH key and `pass`](#chezmoi%2C-ssh-key-%26-pass)
   - [`sway` and base packages](#sway-%26-base-packages)
@@ -433,6 +436,22 @@ then uncomment the line with content: `%wheel ALL=(ALL) ALL`
 ```shell
 $ useradd -m -G wheel ethanify
 $ passwd ethanify
+```
+
+#### Configure [`fprintd`](https://wiki.archlinux.org/title/Fprint) (if applicable)
+
+```shell
+$ sudo fprintd-enroll ethanify
+# Scan right index finger 5 times
+
+$ fprintd-verify
+# Verify right index finger
+
+$ sudo fprintd-enroll ethanify --finger=left-index-finger
+# Scan left index finger 5 times
+
+$ fprintd-verify
+# Verify left index finger
 ```
 
 ### GPG key
