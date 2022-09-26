@@ -54,7 +54,7 @@ aur-sway:
 	@$(YAY) clipman j4-dmenu-desktop swappy-git swaylock-effects-git tessen waypipe wev
 
 aur-work:
-	@$(YAY) debtap
+	@$(YAY) debtap endpoint-verification-chrome fleet-osquery mdatp-bin slack-desktop zoom
 
 core:
 	@sudo pacman -S --asdeps direnv exa fzf git-delta keychain \
