@@ -34,7 +34,6 @@
     - [Setup `pacman` hooks](#setup-pacman-hooks)
     - [Enrolling keys in firmware](#enrolling-keys-in-firmware)
     - [Notes for Intel NUCs](#notes-for-intel-nucs)
-    - [Notes for Intel NUCs](#notes-for-intel-nucs)
     - [Notes for Lenovo Thinkpad X1 Carbon G9](#notes-for-lenovo-thinkpad-x1-carbon-g9)
   - [Configure users](#configure-users)
     - [Configure `sudo`](#configure-sudo)
@@ -395,15 +394,15 @@ $ sbkeysync --verbose --pk
 
 #### Notes for Lenovo Thinkpad X1 Carbon G9
 
-* Enrolling db & KEK with `sbkeysync --verbose` might end up with `Operation not permitted`. Run:
+* Enrolling db & KEK with `sbkeysync --verbose` might end up with `Operation not permitted` error. Run:
 
 ```shell
 $ chattr -i /sys/firmware/efi/efivars/{db,KEK}*
 ```
 
-and re-enroll.
+and re-enrol.
 
-* Enrolling PK with `sbkeysync --pk --verbose` might end up with `Permission denied`. Use instead:
+* Enrolling PK with `sbkeysync --pk --verbose` might end up with `Permission denied` error. Use instead:
 
 ```shell
 $ efi-updatevar -f /etc/secureboot/keys/PK/PK.auth PK
