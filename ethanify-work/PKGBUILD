@@ -1,12 +1,15 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
-pkgname=ethanify-thinkpad
-pkgver=1.0.1
+pkgname=ethanify-work
+pkgver=1.0.0
 pkgrel=1
-pkgdesc="Lenovo Thinkpad X1 Carbon G9 configuration for ethanify systems"
+pkgdesc="Work-related configuration for ethanify systems"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
-  'fprintd'
-  'sof-firmware'
+  'ansible'
+
+  # AUR dependencies
+  'debtap'
 )
+

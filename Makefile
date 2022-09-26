@@ -1,7 +1,7 @@
 SHELL = /bin/bash
 YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit None --answerupgrade None
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
-META_PACKAGES = base devel sway theme desktop personal thinkpad
+META_PACKAGES = base devel sway theme desktop thinkpad personal work
 SYSTEMCTL = sudo systemctl enable --now
 FLATPAK_APPS = us.zoom.Zoom
 FONTS = otf-operator-mono-lig-nerd
@@ -52,6 +52,9 @@ aur-personal:
 
 aur-sway:
 	@$(YAY) clipman j4-dmenu-desktop swappy-git swaylock-effects-git tessen waypipe wev
+
+aur-work:
+	@$(YAY) debtap
 
 core:
 	@sudo pacman -S --asdeps direnv exa fzf git-delta keychain \
