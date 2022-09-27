@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.11
+pkgver=1.0.12
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -31,15 +31,12 @@ depends=(
   'kubectx'
   'lua'
   'mediainfo'
-  'openvpn'
   'qemu'
   'rust'
   'shellcheck'
   'terraform'
 
   # AUR dependencies
-  '1password-cli'
-  'amazon-ecr-credential-helper'
   'asdf-vm'
   'direnv'
   'downgrade'
@@ -51,6 +48,5 @@ depends=(
   'lua-language-server'
 
   # Custom dependencies
-  'argo-rollouts'
   'elixir-ls-bin'
 )

@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-work
-pkgver=1.0.2
+pkgver=1.0.3
 pkgrel=1
 pkgdesc="Work-related configuration for ethanify systems"
 arch=('any')
@@ -10,6 +10,8 @@ depends=(
   'aws-cli'
 
   # AUR dependencies
+  '1password-cli'
+  'amazon-ecr-credential-helper'
   'debtap'
   'endpoint-verification-chrome'
   'mdatp-bin'
@@ -17,6 +19,7 @@ depends=(
   'zoom'
 
   # Custom dependencies
+  'argo-rollouts'
   'fleet-osquery'
 )
 

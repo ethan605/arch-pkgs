@@ -41,7 +41,7 @@ aur-desktop:
 	@$(YAY) fcitx5-breeze postman-bin webtorrent-cli
 
 aur-devel:
-	@$(YAY) 1password-cli amazon-ecr-credential-helper asdf-vm direnv downgrade grpcurl jdtls \
+	@$(YAY) asdf-vm direnv downgrade grpcurl jdtls \
 		kotlin-language-server libffi7 ltex-ls-bin lua-language-server
 
 aur-theme:
@@ -54,7 +54,7 @@ aur-sway:
 	@$(YAY) clipman j4-dmenu-desktop swappy-git swaylock-effects-git tessen waypipe wev
 
 aur-work:
-	@$(YAY) debtap endpoint-verification-chrome fleet-osquery mdatp-bin slack-desktop zoom
+	@$(YAY) 1password-cli amazon-ecr-credential-helper debtap endpoint-verification-chrome fleet-osquery mdatp-bin slack-desktop zoom
 
 core:
 	@sudo pacman -S --asdeps direnv exa fzf git-delta keychain \
