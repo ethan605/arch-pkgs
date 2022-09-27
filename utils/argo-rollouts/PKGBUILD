@@ -1,7 +1,7 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=argo-rollouts
-pkgver=1.2.1
-pkgrel=2
+pkgver=1.3.0
+pkgrel=1
 pkgdesc="Kubectl Argo Rollouts Plugin"
 arch=('any')
 url="https://github.com/argoproj/argo-rollouts"
@@ -9,14 +9,13 @@ license=('Apache 2.0')
 depends=()
 _host="https://github.com/argoproj/argo-rollouts/releases/download"
 _bin="kubectl-argo-rollouts"
-_pre_release=""
 
 source=(
-  "${_bin}::${_host}/v${pkgver}${_pre_release}/${_bin}-linux-amd64"
+  "${_bin}::${_host}/v${pkgver}/${_bin}-linux-amd64"
 )
 
 sha512sums=(
-  "01ca835f972bb6981712c21fba2ab6e78e6fd271002dd8fdb3ae44e959b2e2004265f57387d065b47e3cebd023cf534b76e155f9d200f65c06c660a5f349ae42"
+  "8b678b18fbc6c602bf5d24bcdc93087a776f423c25920e4f6d5e2b8f2e974938799c1456adba1897357d136687ccfd9674699cb0024496c40f51421a18272748"
 )
 
 package() {
