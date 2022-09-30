@@ -51,7 +51,7 @@ aur-personal:
 	@$(YAY) browserpass-chrome dropbox google-chrome megasync-bin nordvpn-bin
 
 aur-sway:
-	@$(YAY) clipman j4-dmenu-desktop swappy-git tessen waypipe wev
+	@$(YAY) clipman gtklock j4-dmenu-desktop swappy-git tessen waypipe wev
 
 aur-work:
 	@$(YAY) 1password-cli amazon-ecr-credential-helper debtap endpoint-verification-chrome fleet-osquery mdatp-bin slack-desktop zoom
