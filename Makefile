@@ -26,6 +26,7 @@ nvim:
 
 misc:
 	@mkdir -p "$(HOME)/.logs"; \
+		touch "$(HOME)/.logs/swayidle.log"; \
 		touch "$(HOME)/.tool-versions"; \
 		gpg --recv-keys \
 			3FEF9748469ADBE15DA7CA80AC2D62742012EA22 \
