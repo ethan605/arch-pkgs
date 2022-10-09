@@ -12,7 +12,7 @@
   - [Preparing logical volumes](#preparing-logical-volumes)
   - [Format logical volumes and mount](#format-logical-volumes-and-mount)
   - [Format and mount EFI partition](#format-and-mount-efi-partition)
-* [2. Installation](#2.-installation)
+* [2. Installation](#2-installation)
   - [Bootstrap packages](#bootstrap-packages)
   - [Generate and update `fstab`](#generate-and-update-fstab)
   - [Change root](#change-root)
@@ -26,7 +26,7 @@
   - [Set console font](#set-console-font)
   - [Set `root` password](#set-root-password)
   - [Reboot](#reboot)
-* [3. Post installation](#3.-post-installation)
+* [3. Post installation](#3-post-installation)
   - [Secure boot](#secure-boot)
     - [Sign in as `root` and install related tools](#sign-in-as-root-and-install-related-tools)
     - [Generate new keys](#generate-new-keys)
@@ -46,7 +46,7 @@
   - [Full packages](#full-packages)
   - [Screen sharing](#screen-sharing)
   - [NordVPN](#nordvpn)
-* [4. Troubleshooting](#4.-troubleshooting)
+* [4. Troubleshooting](#4-troubleshooting)
 
 ## 0. Preparation
 
@@ -607,7 +607,7 @@ $ mount /dev/vg/home /mnt/home
 $ mount /dev/disk/by-partlabel/EFI /mnt/boot
 
 $ lsblk
-# "/mnt/efi", "[SWAP]", "/mnt" and "/mnt/home" should display in "MOUNTPOINTS"
+# "/mnt/boot", "[SWAP]", "/mnt" and "/mnt/home" should display in "MOUNTPOINTS"
 
 $ arch-chroot /mnt
 ```
