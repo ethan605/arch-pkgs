@@ -36,20 +36,20 @@ $(META_PACKAGES):
 	@cd ethanify-$@; $(MAKEPKG)
 
 aur-base:
-	@$(YAY) gotop-bin pass-attr pass-clip pass-extension-tail pass-update
+	@$(YAY) gotop-bin pass-attr pass-clip pass-extension-tail pass-update pipes.sh
 
 aur-desktop:
-	@$(YAY) fcitx5-breeze postman-bin webtorrent-cli
+	@$(YAY) browserpass-chrome fcitx5-breeze google-chrome postman-bin webtorrent-cli
 
 aur-devel:
-	@$(YAY) asdf-vm direnv downgrade grpcurl jdtls \
-		kotlin-language-server libffi7 ltex-ls-bin lua-language-server
+	@$(YAY) asdf-vm direnv downgrade grpcurl jdtls kotlin-language-server \
+		libffi7 ltex-ls-bin lua-language-server perl-image-exiftool
 
 aur-theme:
 	@$(YAY) breeze-snow-cursor-theme otf-stix phinger-cursors ttf-indic-otf ttf-whatsapp-emoji
 
 aur-personal:
-	@$(YAY) browserpass-chrome dropbox google-chrome megasync-bin nordvpn-bin
+	@$(YAY) dropbox megasync-bin nordvpn-bin
 
 aur-sway:
 	@$(YAY) clipman j4-dmenu-desktop swappy-git tessen waypipe wev

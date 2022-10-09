@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-personal
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="Non-work configuration for ethanify systems"
 arch=('any')
@@ -12,9 +12,7 @@ depends=(
   'wireguard-tools'
 
   # AUR dependencies
-  'browserpass-chrome'
   'dropbox'
-  'google-chrome'
   'megasync-bin'
   'nordvpn-bin'
 )

@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.17
+pkgver=1.0.18
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -31,23 +31,18 @@ depends=(
   'qt5-wayland'
   'qutebrowser'
   'solaar'
+  'system-config-printer'
   'telegram-desktop'
   'timidity++'
   'virt-manager'
   'wf-recorder'
   'zathura-pdf-mupdf'
-  #'kdeconnect'
-  #'signal-desktop'
-  #'wireguard-tools'
 
   # AUR dependencies
   'fcitx5-breeze'
   'postman-bin'
   'webtorrent-cli'
-  #'browserpass-chrome'
-  #'dropbox'
-  #'google-chrome'
-  #'megasync-bin'
-  #'nordvpn-bin'
+  'browserpass-chrome'
+  'google-chrome'
 )
 
