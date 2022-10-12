@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.10
+pkgver=1.0.11
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -39,7 +39,9 @@ depends=(
   'neovim'
   'ntfs-3g'
   'openssh'
+  'p7zip'
   'pass-otp'
+  'rar'
   'ripgrep'
   'starship'
   'syncthing'
@@ -47,8 +49,8 @@ depends=(
   'usbutils'
   'vifm'
   'zip'
-  'zsh'
   'zoxide'
+  'zsh'
 
   # AUR dependencies
   'gotop-bin'

@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-thinkpad
-pkgver=1.0.1
+pkgver=1.0.2
 pkgrel=1
 pkgdesc="Lenovo Thinkpad X1 Carbon G9 configuration for ethanify systems"
 arch=('any')
@@ -8,5 +8,12 @@ url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
   'fprintd'
+  'intel-gpu-tools'
+  'intel-media-driver'
+  'libva-intel-driver'
+  'libva-utils'
+  'mesa-utils'
   'sof-firmware'
+  'vulkan-intel'
+  'vulkan-tools'
 )
