@@ -61,4 +61,3 @@ depends=(
   'pipes.sh'
   'yay'
 )
-

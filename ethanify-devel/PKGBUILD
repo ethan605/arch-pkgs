@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.14
+pkgver=1.0.15
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -32,7 +32,6 @@ depends=(
   'kubectx'
   'lua'
   'mediainfo'
-  'qemu'
   'rust'
   'shellcheck'
   'terraform'

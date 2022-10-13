@@ -33,4 +33,3 @@ depends=(
   'waypipe'
   'wev'
 )
-

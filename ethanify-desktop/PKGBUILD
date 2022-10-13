@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.18
+pkgver=1.0.19
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -34,7 +34,6 @@ depends=(
   'system-config-printer'
   'telegram-desktop'
   'timidity++'
-  'virt-manager'
   'wf-recorder'
   'zathura-pdf-mupdf'
 
@@ -45,4 +44,3 @@ depends=(
   'browserpass-chrome'
   'google-chrome'
 )
-

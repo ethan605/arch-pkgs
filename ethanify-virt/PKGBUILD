@@ -1,0 +1,12 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=ethanify-virt
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Virtualization packages"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+depends=(
+  'qemu-base'
+  'virt-manager'
+)

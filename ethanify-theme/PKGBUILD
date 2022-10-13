@@ -27,4 +27,3 @@ depends=(
   # Custom dependencies
   'otf-operator-mono-lig-nerd'
 )
-
