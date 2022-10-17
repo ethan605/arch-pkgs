@@ -1,13 +1,12 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.20
+pkgver=1.0.21
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 depends=(
-  'alacritty'
   'blueman'
   'bluez-utils'
   'brightnessctl'
