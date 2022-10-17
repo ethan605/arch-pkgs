@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.19
+pkgver=1.0.20
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -19,6 +19,7 @@ depends=(
   'firefox'
   'flameshot'
   'geary'
+  'gparted'
   'hplip'
   'mpc'
   'mpd'
@@ -30,6 +31,7 @@ depends=(
   'python-adblock'
   'qt5-wayland'
   'qutebrowser'
+  'remmina'
   'solaar'
   'system-config-printer'
   'telegram-desktop'

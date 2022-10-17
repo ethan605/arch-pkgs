@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-devel
-pkgver=1.0.16
+pkgver=1.0.17
 pkgrel=1
 pkgdesc="Development configuration for ethanify systems"
 arch=('any')
@@ -15,6 +15,7 @@ depends=(
 
   'clang'
   'ctags'
+  'curlie'
   'deno'
   'dmidecode'
   'dnsmasq'
