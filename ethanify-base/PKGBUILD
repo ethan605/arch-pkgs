@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.11
+pkgver=1.0.12
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -43,6 +43,7 @@ depends=(
   'pass-otp'
   'rar'
   'ripgrep'
+  'rsync'
   'starship'
   'syncthing'
   'unzip'
