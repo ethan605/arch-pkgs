@@ -1,5 +1,6 @@
 *.otf
 *.pkg.tar.*
+*.deb
 *.tar.gz
 *.ttf
 /**/pkg/
