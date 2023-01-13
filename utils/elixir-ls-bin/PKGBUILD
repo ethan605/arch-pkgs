@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=elixir-ls-bin
-pkgver=0.12.0
+pkgver=0.13.0
 pkgrel=1
 pkgdesc="Elixir Language Server"
 arch=('any')
@@ -19,7 +19,7 @@ source=(
 )
 
 sha512sums=(
-  "d376f228dd4e948b5ee7d9726729ce23c77cc37a59040938378b6f0a12465d12249b0c44322c5ec99a37acd2c0d98f856a87bcbd37b34d6416d4c4aea5802cb8"
+  "8967147946c49d1be1319be79ef85ee043eee50a11d614675393a3a0c4c990060e235425df00ec6237aae5a8ebbac160eeb9053af9b15288050b81021f483dfb"
 )
 
 package() {

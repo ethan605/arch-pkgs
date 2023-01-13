@@ -5,7 +5,7 @@ META_PACKAGES = base devel sway theme desktop thinkpad personal work virt
 SYSTEMCTL = sudo systemctl enable --now
 FLATPAK_APPS = us.zoom.Zoom
 FONTS = otf-operator-mono-lig-nerd
-UTILS = qrgpg argo-rollouts elixir-ls-bin httpie
+UTILS = qrgpg argo-rollouts elixir-ls-bin
 
 yay:
 	@rm -rf /tmp/yay
