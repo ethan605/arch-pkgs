@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-thinkpad
-pkgver=1.0.2
+pkgver=1.0.3
 pkgrel=1
 pkgdesc="Lenovo Thinkpad X1 Carbon G9 configuration for ethanify systems"
 arch=('any')
@@ -14,6 +14,7 @@ depends=(
   'libva-utils'
   'mesa-utils'
   'sof-firmware'
+  'tlp'
   'vulkan-intel'
   'vulkan-tools'
 )
