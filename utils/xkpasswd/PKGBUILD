@@ -33,6 +33,6 @@ check() {
 }
 
 package() {
-  cd $pkgname-$pkgver
+  cd "$_src_dir"
   install -Dm755 -t "$pkgdir/usr/bin" "target/release/$pkgname"
 }
