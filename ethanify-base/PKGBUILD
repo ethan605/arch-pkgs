@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-base
-pkgver=1.0.12
+pkgver=1.0.13
 pkgrel=1
 pkgdesc="Base system configuration for ethanify systems"
 arch=('any')
@@ -61,4 +61,7 @@ depends=(
   'pass-update'
   'pipes.sh'
   'yay'
+
+  # Custom dependencies
+  'xkpasswd'
 )
