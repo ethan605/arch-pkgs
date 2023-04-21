@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.21
+pkgver=1.0.23
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -11,7 +11,7 @@ depends=(
   'bluez-utils'
   'brightnessctl'
   'browserpass-firefox'
-  'cups'
+  'fcitx5-breeze'
   'fcitx5-configtool'
   'fcitx5-gtk'
   'fcitx5-unikey'
@@ -39,9 +39,9 @@ depends=(
   'zathura-pdf-mupdf'
 
   # AUR dependencies
-  'fcitx5-breeze'
-  'postman-bin'
-  'webtorrent-cli'
   'browserpass-chrome'
   'google-chrome'
+  'postman-bin'
+  'signal-desktop'
+  'webtorrent-cli'
 )
