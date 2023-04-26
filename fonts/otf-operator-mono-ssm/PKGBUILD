@@ -1,0 +1,34 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=otf-operator-mono-ssm
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Original Operator Mono ScreenSmart font"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+
+source=(
+  "OperatorMonoSSm-Bold.otf"
+  "OperatorMonoSSm-BoldItalic.otf"
+  "OperatorMonoSSm-Book.otf"
+  "OperatorMonoSSm-BookItalic.otf"
+  "OperatorMonoSSm-Light.otf"
+  "OperatorMonoSSm-LightItalic.otf"
+  "OperatorMonoSSm-Medium.otf"
+  "OperatorMonoSSm-MediumItalic.otf"
+)
+
+sha512sums=(
+  "11d993de7b7cc2db158bee1818d5589bb736a3e20c1f58ba2b45ede5c95a7a148b3e55d3b031caaf77e71bcaa694c8f329abb70e45a9a7748ca381c6df21db74"
+  "8c8d86b05675893a64f651caa637feee3a56aae259c02e8c726aba9c0937a26b621ea466eba25549759aeda93171127bf8ecd8c7b397a322c54054f98ad5d554"
+  "22f99b53d175389adb6f3051a26cc5a60700a8f59f14ed105340ff619cb779f6483b34bb2d6142f9665e38be53d4ad981edad6b23c984fcbb1c10dccefb87f43"
+  "101e51e6de73eaed848f1e5fd49ff4687d3e4fc9fd87272baf24a8e3d90f1767a7105d130f8a78f8a996dee936cfd168599e74aef29a0712506935ab6fef6c2d"
+  "0b5c51870d640a48472ad20c200a2de08cc3cf5f0806771e7f09fa2a08f90e6f0cd06378dd262f27d36909483ca816e7100c6f90159b5a8d92c9af8ddbd5b8d8"
+  "d5ba5da81f6c9ff9097c4a7f388eb192745d57209cfde29af4245b647391869efd7449eba5523d6bb97d539623aee621f4f90b3648c38535b7f593b564f61b69"
+  "7afed3ab052b2c6923fa090958bd86ba9ad38c159367f15fa1955cfcff749676051862e8380170a4c778726ecd77735950af9a25d38da62deab8768fea5407df"
+  "a4a8ee0f4ec6db9678c38b40ae94fd3545ccef95542bfe7b62d0e83c1eddc1dc17189995b89aa7c82ac6858de47f8e06125c3b3ec3c4384fbbb78963f47ddec5"
+)
+
+package() {
+  install -Dm644 -t "$pkgdir/usr/share/fonts/OTF" *.otf
+}
