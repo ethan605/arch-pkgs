@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=argo-rollouts
-pkgver=1.4.1
+pkgver=1.5.0
 pkgrel=1
 pkgdesc="Kubectl Argo Rollouts Plugin"
 arch=('any')
@@ -16,7 +16,7 @@ source=(
 )
 
 sha512sums=(
-  "73f9829d0fbf2cf133bf75c8532716eed575ee93172a99ebb2dda5e26d8380926ca70296f7de96085eebd23291957daaf1560a78e7cc2f8b6172b41db89c6143"
+  "92197cab29eb7975c950fcbc5636da5f2bd729ffe7797501d3c01312abbeb7ca525549e57cb84f29ffba32e96a31359da96b1509fee5f23986e8f7beebf343f4"
 )
 
 package() {

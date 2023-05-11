@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=elixir-ls-bin
-pkgver=0.14.3
+pkgver=0.14.6
 pkgrel=1
 pkgdesc="Elixir Language Server"
 arch=('any')
@@ -14,12 +14,13 @@ conflicts=(
 _host="https://github.com/elixir-lsp/elixir-ls/releases/download"
 _bin="elixir-ls"
 
+# https://github.com/elixir-lsp/elixir-ls/releases/download/v{pkgver}/elixir-ls.zip
 source=(
   "${_bin}.zip::${_host}/v${pkgver}/${_bin}.zip"
 )
 
 sha512sums=(
-  "33c9ac4157cade3898d05ab21fff1a80babafce438749b1455f0d056f280d6ef37d065e06321b050f0e562cb41daf71cfa2568a909630c8360325c5df1d4d3a2"
+  "313a5089a00eeea8e123fef561c57bd8723bdda99440489e838e0d10cdd1c0ce70745881581f5818f918b4fd2d277341294863325ac2f85e39156ba658989527"
 )
 
 package() {
