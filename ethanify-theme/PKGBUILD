@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-theme
-pkgver=1.0.3
+pkgver=1.0.4
 pkgrel=1
 pkgdesc="Theme configuration for ethanify systems"
 arch=('any')
@@ -25,5 +25,5 @@ depends=(
   'ttf-whatsapp-emoji'
 
   # Custom dependencies
-  'otf-operator-mono-lig-nerd'
+  'otf-operator-mono-nerd'
 )

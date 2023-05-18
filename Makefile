@@ -4,7 +4,7 @@ MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
 META_PACKAGES = base devel sway theme desktop thinkpad personal work virt
 SYSTEMCTL = sudo systemctl enable --now
 FLATPAK_APPS = us.zoom.Zoom
-FONTS = otf-operator-mono-lig-nerd
+FONTS = otf-operator-mono-nerd
 UTILS = qrgpg xkpasswd argo-rollouts elixir-ls-bin
 
 yay:

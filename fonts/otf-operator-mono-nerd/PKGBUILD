@@ -1,0 +1,30 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=otf-operator-mono-nerd
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Operator Mono Nerd fonts"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+
+source=(
+  "OperatorMonoNerdFont-BookItalic.otf"
+  "OperatorMonoNerdFont-Book.otf"
+  "OperatorMonoNerdFont-LightItalic.otf"
+  "OperatorMonoNerdFont-Light.otf"
+  "OperatorMonoNerdFont-MediumItalic.otf"
+  "OperatorMonoNerdFont-Medium.otf"
+)
+
+sha512sums=(
+  "3465c2625baafcd773d9bd7da6c6299b7dcaaa8b474e586a3262eb67b9ead6ebea85b0a6f939d159ecd3edcb1c1ea89a4ca87fc7f0077457c45a7234751dcc32"
+  "b3b3bc146eafcc14aa0bf570f2fc929d015cb48a6f54456f854e0542aaaf5ea9b5f2b8a9f8768ea11794068de91cea98bcf3461b32df5c679fb40953d7bd138b"
+  "9d599420c1a8af2b1ab12b97539ecfc5fe299b5b1fc7aae4a8cc1a1da0ee62ff10fcf41e3597ba7044cf2a67917637df906c76f786810cc5bd674bcc3edbe6dd"
+  "a23540dc0ca142c7e5ae8fb086ff722a786f897ce8c350f65ea4e57807c673b171219d26e7a5eab463d6ef62ab4b21fd3d5fc5be82bac7728e153f85bf6acad8"
+  "14468ec3e9e7be37a4a16ecc4c629746cc14f15ecabc7c5caf8f24d53b44a3ec2ac2c2a130ad302f95c5c27f60f5d99a7cce535866fc9d644de2b417628648b0"
+  "1080ffc99ab3d6bad2bb6f400965a57d746e65e09dd80de61ca04168e8d4000d843e542d7fb94358c9db1cd16323c96eb92ac29125434dc6ca0362682b972273"
+)
+
+package() {
+  install -Dm644 -t "$pkgdir/usr/share/fonts/OTF" *.otf
+}
