@@ -39,6 +39,7 @@
     - [Configure `sudo`](#configure-sudo)
     - [Add new user](#add-new-user)
     - [Configure `fprintd` (if applicable)](#configure-fprintd-if-applicable)
+  - [Gnome Keyring](#gnome-keyring)
   - [GPG key](#gpg-key)
   - [`chezmoi`, SSH key and `pass`](#chezmoi%2C-ssh-key-%26-pass)
   - [`sway` and base packages](#sway-%26-base-packages)
@@ -451,6 +452,19 @@ $ sudo fprintd-enroll ethanify --finger=left-index-finger
 
 $ fprintd-verify
 # Verify left index finger
+```
+
+### Gnome Keyring
+
+Add optional entries to `/etc/pam.d/login`
+
+```shell
+# /etc/pam.d/login
+# ... other auth entries
+auth       optional     pam_gnome_keyring.so
+# ... other session entries
+session    optional     pam_gnome_keyring.so auto_start
+# ... other entries
 ```
 
 ### GPG key
