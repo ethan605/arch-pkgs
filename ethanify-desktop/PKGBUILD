@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-desktop
-pkgver=1.0.24
+pkgver=1.0.25
 pkgrel=1
 pkgdesc="Desktop configuration for ethanify systems"
 arch=('any')
@@ -19,6 +19,7 @@ depends=(
   'firefox'
   'flameshot'
   'geary'
+  'gnome-keyring'
   'gparted'
   'hplip'
   'mpc'
@@ -42,6 +43,7 @@ depends=(
   # AUR dependencies
   'browserpass-chrome'
   'google-chrome'
+  'lssecret-git'
   'postman-bin'
   'signal-desktop'
   'webtorrent-cli'
