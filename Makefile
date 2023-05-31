@@ -3,7 +3,6 @@ YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit 
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
 META_PACKAGES = base devel sway theme desktop thinkpad personal work virt
 SYSTEMCTL = sudo systemctl enable --now
-FLATPAK_APPS = us.zoom.Zoom
 FONTS = otf-operator-mono-nerd
 UTILS = qrgpg xkpasswd argo-rollouts elixir-ls-bin
 
@@ -66,9 +65,6 @@ sway-base:
 	@sudo pacman -S --asdeps bemenu-wayland firefox foot \
 		sway swaybg swayidle waybar wl-clipboard wofi; \
 		yay -S --asdeps j4-dmenu-desktop swaylock-effects-git
-
-flatpak:
-	@flatpak install flathub @$(FLATPAK_APPS)
 
 fonts: $(FONTS)
 

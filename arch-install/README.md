@@ -39,10 +39,10 @@
     - [Configure `sudo`](#configure-sudo)
     - [Add new user](#add-new-user)
     - [Configure `fprintd` (if applicable)](#configure-fprintd-if-applicable)
-  - [Gnome Keyring](#gnome-keyring)
   - [GPG key](#gpg-key)
   - [`chezmoi`, SSH key and `pass`](#chezmoi%2C-ssh-key-%26-pass)
   - [`sway` and base packages](#sway-%26-base-packages)
+  - [Gnome Keyring](#gnome-keyring)
   - [Enable services](#enable-services)
   - [Full packages](#full-packages)
   - [Screen sharing](#screen-sharing)
@@ -454,19 +454,6 @@ $ fprintd-verify
 # Verify left index finger
 ```
 
-### Gnome Keyring
-
-Add optional entries to `/etc/pam.d/login`
-
-```shell
-# /etc/pam.d/login
-# ... other auth entries
-auth       optional     pam_gnome_keyring.so
-# ... other session entries
-session    optional     pam_gnome_keyring.so auto_start
-# ... other entries
-```
-
 ### GPG key
 
 Login to `ethanify` and clone `arch-pkgs`:
@@ -523,6 +510,17 @@ $ make misc
 # logout and login again to boot into sway
 ```
 
+### Gnome Keyring
+
+Add optional entries to `/etc/pam.d/login`
+
+```shell
+# /etc/pam.d/login
+# ... other auth entries
+auth       optional     pam_gnome_keyring.so
+# ... other entries
+```
+
 ### Full packages
 
 Add GPG keys:
@@ -554,8 +552,6 @@ $ make aur-sway
 $ make sway
 
 # Other metapackages if necessary
-
-$ make flatpak
 ```
 
 Add metapackages to ignore list of `pacman.conf`:
