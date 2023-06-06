@@ -1,0 +1,26 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=otf-operator-mono-ssm-nerd
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Operator Mono ScreenSmart with Nerd fonts patch"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+
+source=(
+  "OperatorMonoSSmNerdFont-Book.otf"
+  "OperatorMonoSSmNerdFont-BookItalic.otf"
+  "OperatorMonoSSmNerdFont-Medium.otf"
+  "OperatorMonoSSmNerdFont-MediumItalic.otf"
+)
+
+sha512sums=(
+  "20ee7c4bc05b99f567b981b9c7f88093be789fcb8bf2b3c6147ca7991abcaec542cafab6fc9d6de96f0285ac4b8aceca1c7cebc33e7aa77ad89ecb1ce15ea079"
+  "4f181c50fcc6965911442b581f3da3d41db4f51e43fe65e00b4424650e7c97d55e9aae7d6fce035cd45d01eddd895d3f76bcfcb69cd268ab05b9bef247746be1"
+  "a7d351963541749c721e780edb13e9e1be8c733e1023f756da2123ddc07c45bbcc28094d79ecac274e169c3c02575ef1e271c3ef2bd4b334d96145318231d195"
+  "454e25a4b68157f76f64fac396defef0367e827665729f1fe06834ca09e30f08daddc5111aedac8c2dbc9af05cc61ea0ae6732b84f5d12ead9fb355e0160dd25"
+)
+
+package() {
+  install -Dm644 -t "$pkgdir/usr/share/fonts/OTF" *.otf
+}
