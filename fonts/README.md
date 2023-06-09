@@ -16,5 +16,5 @@ Follow [`operator-mono-lig`'s instruction](https://github.com/kiliman/operator-m
 From `fonts/` directory, run:
 
 ```shell
-$ docker run --rm -v ./<original-fonts-folder>:/in -v ./<original-fonts-folder>-nerd:/out nerdfonts/patcher
+$ docker run --rm -v ./<original-fonts-folder>:/in -v ./<original-fonts-folder>-nerd:/out nerdfonts/patcher --complete
 ```
