@@ -1,0 +1,30 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=ttf-cabin
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Original Cabin fonts"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+
+source=(
+  "Cabin-BoldItalic.ttf"
+  "Cabin-Bold.ttf"
+  "Cabin-Italic.ttf"
+  "Cabin-MediumItalic.ttf"
+  "Cabin-Medium.ttf"
+  "Cabin-Regular.ttf"
+)
+
+sha512sums=(
+  "22c7ac9f49559ed3636028dcf771e3ceebbe769901913b19f6d291ba7d24503b2715ebc8666480bff04ea395dbe45329b1eb5f6e73db0a460c227a7c0420241d"
+  "04566addeb6d69a83b9e695ac0780fa2204f3bd31fcea2e9900e4d6460d635e9af0b1607140d68785b7d8d9f4ca10b2a9f090d8d887f745c5d571cbbb14bd9eb"
+  "a8babaed59a2d0f3b0b4f0824eb5f3747096d0d309a6bbe473bcd1a47c2412037c2f7129fa5c1e10f41884b195029f09a1dbf798f0831dfc18ee447bf1d220c0"
+  "54a2b09bde2459b7bed65b30f50af9636af43fe259359864c7f9759639200760997646a400c68584fcc6f2f51bd0d9df3d4a9640f2d5d3873a5174c2f5a8f9eb"
+  "48159b767f96c7a544f7894ee5c4681ac58261e4a5821dfa7e6a6a88c46041d7f890b4a90705ccec5cee72d146ac73a3a1f32edf8234acfd99b0dd2c01673d2e"
+  "ee535606680aad647cd2c0415b990bd0840ebb7df029f31f2d0dd3f364b0b3ef75ab3dc8914963d843e7fb87cb5eeee6002b3473858d10061836c7581640f344"
+)
+
+package() {
+  install -Dm644 -t "$pkgdir/usr/share/fonts/TTF" *.ttf
+}

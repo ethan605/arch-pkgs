@@ -3,7 +3,7 @@ YAY = yay -S --asdeps --needed --answerclean All --answerdiff None --answeredit 
 MAKEPKG = makepkg --cleanbuild --noconfirm --syncdeps --install --needed --clean
 META_PACKAGES = base devel sway theme desktop thinkpad personal work virt
 SYSTEMCTL = sudo systemctl enable --now
-FONTS = otf-operator-mono-nerd otf-operator-mono-ssm-nerd
+FONTS = otf-operator-mono-nerd otf-operator-mono-ssm-nerd ttf-cabin
 UTILS = qrgpg xkpasswd argo-rollouts elixir-ls-bin
 
 yay:
