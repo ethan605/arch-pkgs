@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=otf-operator-mono-nerd
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="Operator Mono Nerd fonts"
 arch=('any')
@@ -8,21 +8,29 @@ url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 
 source=(
-  "OperatorMonoNerdFont-BookItalic.otf"
-  "OperatorMonoNerdFont-Book.otf"
+  "OperatorMonoNerdFont-BoldItalic.otf"
+  "OperatorMonoNerdFont-Bold.otf"
+  "OperatorMonoNerdFont-ExtraLightItalic.otf"
+  "OperatorMonoNerdFont-ExtraLight.otf"
+  "OperatorMonoNerdFont-Italic.otf"
   "OperatorMonoNerdFont-LightItalic.otf"
   "OperatorMonoNerdFont-Light.otf"
   "OperatorMonoNerdFont-MediumItalic.otf"
   "OperatorMonoNerdFont-Medium.otf"
+  "OperatorMonoNerdFont-Regular.otf"
 )
 
 sha512sums=(
-  "3465c2625baafcd773d9bd7da6c6299b7dcaaa8b474e586a3262eb67b9ead6ebea85b0a6f939d159ecd3edcb1c1ea89a4ca87fc7f0077457c45a7234751dcc32"
-  "b3b3bc146eafcc14aa0bf570f2fc929d015cb48a6f54456f854e0542aaaf5ea9b5f2b8a9f8768ea11794068de91cea98bcf3461b32df5c679fb40953d7bd138b"
-  "9d599420c1a8af2b1ab12b97539ecfc5fe299b5b1fc7aae4a8cc1a1da0ee62ff10fcf41e3597ba7044cf2a67917637df906c76f786810cc5bd674bcc3edbe6dd"
-  "a23540dc0ca142c7e5ae8fb086ff722a786f897ce8c350f65ea4e57807c673b171219d26e7a5eab463d6ef62ab4b21fd3d5fc5be82bac7728e153f85bf6acad8"
-  "14468ec3e9e7be37a4a16ecc4c629746cc14f15ecabc7c5caf8f24d53b44a3ec2ac2c2a130ad302f95c5c27f60f5d99a7cce535866fc9d644de2b417628648b0"
-  "1080ffc99ab3d6bad2bb6f400965a57d746e65e09dd80de61ca04168e8d4000d843e542d7fb94358c9db1cd16323c96eb92ac29125434dc6ca0362682b972273"
+  "458dd365f5dac1cc7efa3b33dd4aa594f378604f096569e99df5f1a9abd936f2a13876f6c2c808abea820a9c1487f447ae5c265088917524d411df2c2c5e68a8"
+  "3b7de3175fd3331335a5c6628a7957b63f8e6f08844169ec54e2fc936f95cdcf4a7574ed63920db1f6c35b72c2ae20fcfa47b692c37be3be0f9b8f66fd3d3025"
+  "d364de8cbc487b8d184304d2b5d4bce39e39c529d1cbfbb490b9693b7fda84fa59f68957fc5e916a5f6d2e7f6f5a7490fe2a4a8bafb2983e352e0b4b6c689397"
+  "508cc6aca40ed7525d346034c1e89870c120a2b899baa1937f144cddbf207c0365f8671a4d0d4fda2e8e5ff8339e23e21f9f0cfee808efa3870f7e0da2ec4570"
+  "77a639013e3ec64a0c1a1fc66ec94e9ba98db951b4974b863efb823a0584627e196f67bef05bbc9976c0f007913bdd43e2a0d52ce5b67f53d671e5d6c7f53e00"
+  "8c0ae6768418f090ae893fd94edea41c114fd6f22df6ab9900cbf55e0a16d9c5aea198e93a52fc9824c9ddcce511708df721ea23408b2a58ca4e3f1f809350f9"
+  "bb4d77e6a787c74c4ed5e4083b5ba2aa559b412dd69eccf96c1c9bc8955e87534cc9beac7199b91361591ba91b1ac65676afeae4a5cac0e4cfc46a3c2177022c"
+  "1d4cd373f2abaea6fa2c131cc63e6237c83df5eb060436648b589d58aebac23832a47b77164e2d64b2fe627bc36a79b04992a005d1db3e87936c35fd2936a665"
+  "3cc29b383c3730c895a0d623ae0bad4a66a3d2039b17b7ec566ca449edfe0f14743a9be180f52fa8f72c3e6eb4b7ec8bcd0031b5db9d6520671220cac09df788"
+  "82786bc01e933560b5519d0130fdccf1604e18cb74de921d2903fbdfba93076b1e3ddb977b792e06f498dd60a5203f441a61e4785f295a9536c91d3cfd126679"
 )
 
 package() {

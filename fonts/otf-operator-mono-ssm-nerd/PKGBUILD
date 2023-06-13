@@ -1,24 +1,32 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=otf-operator-mono-ssm-nerd
-pkgver=1.0.0
-pkgrel=1
+pkgver=1.0.1
+pkgrel=2
 pkgdesc="Operator Mono ScreenSmart with Nerd fonts patch"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 
 source=(
-  "OperatorMonoSSmNerdFont-Book.otf"
-  "OperatorMonoSSmNerdFont-BookItalic.otf"
-  "OperatorMonoSSmNerdFont-Medium.otf"
+  "OperatorMonoSSmNerdFont-BoldItalic.otf"
+  "OperatorMonoSSmNerdFont-Bold.otf"
+  "OperatorMonoSSmNerdFont-Italic.otf"
+  "OperatorMonoSSmNerdFont-LightItalic.otf"
+  "OperatorMonoSSmNerdFont-Light.otf"
   "OperatorMonoSSmNerdFont-MediumItalic.otf"
+  "OperatorMonoSSmNerdFont-Medium.otf"
+  "OperatorMonoSSmNerdFont-Regular.otf"
 )
 
 sha512sums=(
-  "20ee7c4bc05b99f567b981b9c7f88093be789fcb8bf2b3c6147ca7991abcaec542cafab6fc9d6de96f0285ac4b8aceca1c7cebc33e7aa77ad89ecb1ce15ea079"
-  "4f181c50fcc6965911442b581f3da3d41db4f51e43fe65e00b4424650e7c97d55e9aae7d6fce035cd45d01eddd895d3f76bcfcb69cd268ab05b9bef247746be1"
-  "a7d351963541749c721e780edb13e9e1be8c733e1023f756da2123ddc07c45bbcc28094d79ecac274e169c3c02575ef1e271c3ef2bd4b334d96145318231d195"
-  "454e25a4b68157f76f64fac396defef0367e827665729f1fe06834ca09e30f08daddc5111aedac8c2dbc9af05cc61ea0ae6732b84f5d12ead9fb355e0160dd25"
+  "00886c346495d2c62914249b380d3d2adb812ec4af32655be53fa548046e143ddaf4b81a000265165fe3c2ae6147d94f78b12f5db9d74fbfe67205f53aad7c7a"
+  "426ee6c67070e09055685dc5518225bab144c9855c47b568e07939d5744bc7bf14abb0cb203ad68bb72ef7ce017ab9230ec79e1ea7b99bc60eff86a52c5a838b"
+  "907e00fbac7a1057102610374ac84e9afd764b22475a6f17f3fe28640d78c8e9bb587ab65b18b5118f2ef8c7cea82c805c7183dfeedafc6b87566733b7e56927"
+  "a4fad19f2d619a19074eaa45c6d21ade05ffde99d0d752b8cc79a45243c90cc90f11fe0267abf3c463ecee7a090206382103dcc2af806a134d6cd51f7c8ab645"
+  "1b255882ae41dbe9646efc02789e546c3e78f0b718388ac129337ac36d1c28fdff03bc02092416a4fa0263cd2b96a0741e74eda2e64da3200479b7c9f9e36b70"
+  "d036bc3ecf2a7be4a4e613bf72747070a9c32341f0eba6def7ab700bccd3d470e882a18cec3c5d1ffa435061dc2e08e68fbe5963ca78543ce4bc0ba97b4b9689"
+  "40ecb9077608888120bf9075227f31a6bf0dad6aa6c44467a0b8142436072b86d488e61f12cae6ef2d461c000f6998a60aa566d1c4abfa754ff7ac609f723bfb"
+  "668b2f3aefaeb739148f25e035be9dece807080bae5d0351bf7e07d7c25329c1458fb36d5b836d73a26b9094d01f491d7375118708fbcbc75a3f056546022034"
 )
 
 package() {
