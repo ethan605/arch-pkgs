@@ -1,0 +1,28 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=ttf-samsung-sans
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Original Samsung Sans fonts"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+
+source=(
+  "SamsungSans-Bold.ttf"
+  "SamsungSans-Light.ttf"
+  "SamsungSans-Medium.ttf"
+  "SamsungSans-Regular.ttf"
+  "SamsungSans-Thin.ttf"
+)
+
+sha512sums=(
+  "fc9266f025186f14faa298016616572ec97c5d424a32c85f1b01b3eb1ddd6c673ae98c8f5d3f6b172aa1b30909628ccea61fb9333fb051d784e78f54819e0b5f"
+  "2491e1d9e4a61f200e3b8ba13155acf121c002b421a691a651c1e2e4ee3acdebe31172388f3244e53f10e54339f43f9c79f50f69c44a99339d90c0073f4380d2"
+  "89d33369d9c0b23326019ec1c8d9674eac7b6fdbccca41e603a128ca887070c148d64f037436ae233875519937be0ff42c6b5f2944ab65fb5ed230c73556a95c"
+  "2e0757e2ca5e3b478ff8a9285701ecfb0f971809f184f29eded40ed69c0d4817ccc97ccd44414a57d0ce677c7b03979d1bdfb16cba828f8cf64070421733150c"
+  "414af71e9fda4ac28bbb632a3c2d55ab275fbc23ef110ce2fb2cdee7c053876277d68161718ca768fad8527f9ba63b046ece364a9e720de50f1c97d7097dbb58"
+)
+
+package() {
+  install -Dm644 -t "$pkgdir/usr/share/fonts/TTF" *.ttf
+}
