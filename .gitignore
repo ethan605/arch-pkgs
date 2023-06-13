@@ -13,4 +13,5 @@
 
 # Keeps
 !/**/PKGBUILD
-!/fonts/otf-operator-mono*/*.otf
+!/fonts/otf-*/*.otf
+!/fonts/ttf-*/*.ttf
