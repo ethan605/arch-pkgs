@@ -1,6 +1,6 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=ethanify-theme
-pkgver=1.0.5
+pkgver=1.0.6
 pkgrel=1
 pkgdesc="Theme configuration for ethanify systems"
 arch=('any')
@@ -9,6 +9,7 @@ license=('MIT')
 depends=(
   'breeze-gtk'
   'breeze-icons'
+  'cantarell-fonts'
   'noto-fonts-cjk'
   'otf-latin-modern'
   'otf-latinmodern-math'
@@ -25,5 +26,8 @@ depends=(
   'ttf-whatsapp-emoji'
 
   # Custom dependencies
+  'otf-operator-mono-nerd'
   'otf-operator-mono-ssm-nerd'
+  'ttf-cabin'
+  'ttf-samsung-sans'
 )
