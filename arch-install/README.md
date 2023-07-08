@@ -40,8 +40,8 @@
     - [Add new user](#add-new-user)
     - [Configure `fprintd` (if applicable)](#configure-fprintd-if-applicable)
   - [GPG key](#gpg-key)
-  - [`chezmoi`, SSH key and `pass`](#chezmoi%2C-ssh-key-%26-pass)
-  - [`sway` and base packages](#sway-%26-base-packages)
+  - [`chezmoi`, SSH key and `pass`](#chezmoi-ssh-key--pass)
+  - [`sway` and base packages](#sway--base-packages)
   - [Gnome Keyring](#gnome-keyring)
   - [Enable services](#enable-services)
   - [Full packages](#full-packages)
@@ -456,7 +456,7 @@ $ fprintd-verify
 
 ### GPG key
 
-Login to `ethanify` and clone `arch-pkgs`:
+Clone `arch-pkgs`:
 
 ```shell
 $ git clone https://github.com/ethan605/arch-pkgs
