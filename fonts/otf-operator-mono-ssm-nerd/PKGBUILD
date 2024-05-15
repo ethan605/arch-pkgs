@@ -1,32 +1,32 @@
 # Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
 pkgname=otf-operator-mono-ssm-nerd
-pkgver=1.0.1
-pkgrel=2
-pkgdesc="Operator Mono ScreenSmart with Nerd fonts patch"
+pkgver=3.2.1
+pkgrel=1
+pkgdesc="Operator Mono ScreenSmart with Nerd fonts patch (v3.2.1)"
 arch=('any')
 url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 
 source=(
-  "OperatorMonoSSmNerdFont-BoldItalic.otf"
   "OperatorMonoSSmNerdFont-Bold.otf"
+  "OperatorMonoSSmNerdFont-BoldItalic.otf"
   "OperatorMonoSSmNerdFont-Italic.otf"
-  "OperatorMonoSSmNerdFont-LightItalic.otf"
   "OperatorMonoSSmNerdFont-Light.otf"
-  "OperatorMonoSSmNerdFont-MediumItalic.otf"
+  "OperatorMonoSSmNerdFont-LightItalic.otf"
   "OperatorMonoSSmNerdFont-Medium.otf"
+  "OperatorMonoSSmNerdFont-MediumItalic.otf"
   "OperatorMonoSSmNerdFont-Regular.otf"
 )
 
 sha512sums=(
-  "00886c346495d2c62914249b380d3d2adb812ec4af32655be53fa548046e143ddaf4b81a000265165fe3c2ae6147d94f78b12f5db9d74fbfe67205f53aad7c7a"
-  "426ee6c67070e09055685dc5518225bab144c9855c47b568e07939d5744bc7bf14abb0cb203ad68bb72ef7ce017ab9230ec79e1ea7b99bc60eff86a52c5a838b"
-  "907e00fbac7a1057102610374ac84e9afd764b22475a6f17f3fe28640d78c8e9bb587ab65b18b5118f2ef8c7cea82c805c7183dfeedafc6b87566733b7e56927"
-  "a4fad19f2d619a19074eaa45c6d21ade05ffde99d0d752b8cc79a45243c90cc90f11fe0267abf3c463ecee7a090206382103dcc2af806a134d6cd51f7c8ab645"
-  "1b255882ae41dbe9646efc02789e546c3e78f0b718388ac129337ac36d1c28fdff03bc02092416a4fa0263cd2b96a0741e74eda2e64da3200479b7c9f9e36b70"
-  "d036bc3ecf2a7be4a4e613bf72747070a9c32341f0eba6def7ab700bccd3d470e882a18cec3c5d1ffa435061dc2e08e68fbe5963ca78543ce4bc0ba97b4b9689"
-  "40ecb9077608888120bf9075227f31a6bf0dad6aa6c44467a0b8142436072b86d488e61f12cae6ef2d461c000f6998a60aa566d1c4abfa754ff7ac609f723bfb"
-  "668b2f3aefaeb739148f25e035be9dece807080bae5d0351bf7e07d7c25329c1458fb36d5b836d73a26b9094d01f491d7375118708fbcbc75a3f056546022034"
+  "af3de517a882d18e5a9be12018209d43dcf561d00ca58dfe82b623720dc691bd3a3a91012c7228303fba64adecd2af7767e2b5835bfd0eeab8ec2ebbd820561c"
+  "1ccd10126de45e40101e7635fbed1799287b93043e2669e12de7572b8e9611b1016d131a55ee2511b0ecd6514ce7928db8c16c1b303004578eeb5a19f7eeceba"
+  "a827a4251c4226126b67dbd4ff0efca4056a9bd120839f659c264d592eec4b981c7f9f0da2d8924bcf83ba25000d4a32db9406c7006dd5e890a3b36e22fe38f3"
+  "3f7774bc618cdca47f88707d521b368f2efffe11dce6bf8a88c575029a6e97b7e8b4364939fffd5f18661c1ddb27e08d6d919e197a8dd680d4e43f2d15047ef7"
+  "d8191345ad8b3313cf07ef213c1fd3a26d7b592abf39a7439eb7799cabed991798f0b88fcfd1c4ca9e9e282008b617f345da142665d49c3b670b8cf7b4587c7f"
+  "fb8f05d9f29d59594ce1dbf8d5bddb239052ae8d19889347ee7fa90497baaefa56ae4eb4357a42c8d01ffc68de7787082081b27c03ff07637727cd3f54b88606"
+  "485e7791ede409b0624d9842fc1fa68b9470f6261afc7a2b97a55e480a63271fbebd7c49e086554ce2c5a8dfddccb247795be7b20a43d63280f5dd50376ed64d"
+  "2abb37d0a379dd551fbe61d7278c01687bd88b9c33e46eb8cd81ca1ba97625d04d9567efab17745162b28bc63d3d1dfde783b0dee987fcd9151e7fb11a017597"
 )
 
 package() {
