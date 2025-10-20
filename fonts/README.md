@@ -16,6 +16,6 @@ Follow [`operator-mono-lig`'s instruction](https://github.com/kiliman/operator-m
 From `fonts/` directory, run:
 
 ```shell
-$ docker run --rm -v ./otf-operator-mono:/in:Z -v ./otf-operator-mono-nerd:/out:Z nerdfonts/patcher --complete
-$ docker run --rm -v ./otf-operator-mono-ssm:/in:Z -v ./otf-operator-mono-ssm-nerd:/out:Z nerdfonts/patcher --complete
+$ docker run --rm -v ./otf-operator-mono:/in:Z -v ./otf-operator-mono-nerd:/out:Z nerdfonts/patcher --complete --progressbars
+$ docker run --rm -v ./otf-operator-mono-ssm:/in:Z -v ./otf-operator-mono-ssm-nerd:/out:Z nerdfonts/patcher --complete --progressbars
 ```
