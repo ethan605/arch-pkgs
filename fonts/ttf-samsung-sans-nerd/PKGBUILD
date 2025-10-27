@@ -1,0 +1,28 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=ttf-samsung-sans-nerd
+pkgver=3.4.0
+pkgrel=1
+pkgdesc="Samsung Sans with Nerd fonts patch (v3.4.0)"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+
+source=(
+	"SamsungSansNerdFont-Bold.ttf"
+	"SamsungSansNerdFont-Light.ttf"
+	"SamsungSansNerdFont-Medium.ttf"
+	"SamsungSansNerdFont-Regular.ttf"
+	"SamsungSansNerdFont-Thin.ttf"
+)
+
+sha512sums=(
+	"381c961ed626e9f81abfd8bb5193d7146726003ba603ceb181a9d62792a335e7b45bb98b7e16333959c0f71a8521340eb4ab17e12e2966ec1180fe10476cc99f"
+	"3c2b78510b007a6ed84e0532cc93a9fa6f2fb9fcd847fa7216140f4f2fc6dc736e67ae68caf916497774768807c4874e2a55339b64ae5d078a91a4d1885e8b22"
+	"fadf890e71201edbf8e1c7b3a56123fbfcf5582f358dd8ac3d4ee9efc18f984654ccc7f2204c1082ae2061ff61773ca434194e9074dff6e70347d8b026ae5221"
+	"10733b5dbc4f649ed94ffc55b731b6e6547779e52b8c762aa91ff817b53837297579bdafaba2bfa98ba8166d493f24c6f56c402208dcfbaa8a742e3673cbdfa0"
+	"d8d6ce834d33374495577920fab6c210d71031a93b38a791b3805abdb1fd6d26d8581e2620a19bd3be78d4d66cea9574486372c3a86fb26a7913f48029f3283b"
+)
+
+package() {
+	install -Dm644 -t "$pkgdir/usr/share/fonts/TTF" *.ttf
+}

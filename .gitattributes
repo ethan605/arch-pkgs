@@ -63,3 +63,14 @@ fonts/otf-operator-mono/OperatorMono-Light.otf filter=lfs diff=lfs merge=lfs -te
 fonts/otf-operator-mono/OperatorMono-Medium.otf filter=lfs diff=lfs merge=lfs -text
 fonts/otf-operator-mono-nerd/OperatorMonoNerdFont-LightItalic.otf filter=lfs diff=lfs merge=lfs -text
 fonts/otf-operator-mono-ssm/OperatorMonoSSm-Book.otf filter=lfs diff=lfs merge=lfs -text
+fonts/ttf-samsung-sans-nerd/SamsungSansNerdFont-Bold.ttf filter=lfs diff=lfs merge=lfs -text
+fonts/ttf-cabin-nerd/CabinNerdFont-Italic.ttf filter=lfs diff=lfs merge=lfs -text
+fonts/ttf-cabin-nerd/CabinNerdFont-Regular.ttf filter=lfs diff=lfs merge=lfs -text
+fonts/ttf-samsung-sans-nerd/SamsungSansNerdFont-Light.ttf filter=lfs diff=lfs merge=lfs -text
+fonts/ttf-cabin-nerd/CabinNerdFont-Bold.ttf filter=lfs diff=lfs merge=lfs -text
+fonts/ttf-cabin-nerd/CabinNerdFont-Medium.ttf filter=lfs diff=lfs merge=lfs -text
+fonts/ttf-cabin-nerd/CabinNerdFont-MediumItalic.ttf filter=lfs diff=lfs merge=lfs -text
+fonts/ttf-samsung-sans-nerd/SamsungSansNerdFont-Regular.ttf filter=lfs diff=lfs merge=lfs -text
+fonts/ttf-cabin-nerd/CabinNerdFont-BoldItalic.ttf filter=lfs diff=lfs merge=lfs -text
+fonts/ttf-samsung-sans-nerd/SamsungSansNerdFont-Medium.ttf filter=lfs diff=lfs merge=lfs -text
+fonts/ttf-samsung-sans-nerd/SamsungSansNerdFont-Thin.ttf filter=lfs diff=lfs merge=lfs -text

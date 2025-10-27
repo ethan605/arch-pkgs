@@ -1,0 +1,30 @@
+# Maintainer: Thanh Nguyen <xtnguyen605@gmail.com>
+pkgname=ttf-cabin-nerd
+pkgver=3.4.0
+pkgrel=1
+pkgdesc="Cabin with Nerd fonts patch (v3.4.0)"
+arch=('any')
+url="https://github.com/ethan605/arch-pkgs"
+license=('MIT')
+
+source=(
+	"CabinNerdFont-Bold.ttf"
+	"CabinNerdFont-BoldItalic.ttf"
+	"CabinNerdFont-Italic.ttf"
+	"CabinNerdFont-Medium.ttf"
+	"CabinNerdFont-MediumItalic.ttf"
+	"CabinNerdFont-Regular.ttf"
+)
+
+sha512sums=(
+	"89cae3ed0d6300127e3c5b5b8b34f8f904f993d5815481e431ca5fcceac26c0462607a277823444681b2860fbc895302c2f8165908e9c084d7006573335d013b"
+	"3e7089e72c4782afa30ecbfd10937ebdfe2c8e7f1c0e876fe99188093b80ad45930caacee65d22edbcdda981472e85462c1c3c9f2c0a82ede1934374e5098949"
+	"54bfe04b9e4757814b0ffb694bf995edf16135f0872d0a7f7a4f16d816b12ed6fae7696c774c16414c7cab8199efb901da2af07e87409d4b71379a9456f01936"
+	"3bad147cbad0a1aeb53e9d965d9e26781972918595c3f77f142942371f3294a289d2e2e786a194511be68e7a5c8d7e1f7ec396392b1a6fae27d5454a76e6e07e"
+	"d8e83b906dc88b414b6ef14cdca574fef8ef400637353c8ecbfe00f24c1ca9fa6a498f0146b0ba8cdebdfcac05bfab2b356d3a9393000f70663bdc412a23181f"
+	"e9960c3371f8258b1eb9e49d20c57b7bc4154b0bc17ab2093989032b56c09779492e768171ad662bda6343e9c1d9d53a304cd38a78ca736881bfaf192a25a121"
+)
+
+package() {
+	install -Dm644 -t "$pkgdir/usr/share/fonts/TTF" *.ttf
+}
