@@ -18,4 +18,5 @@ From `fonts/` directory, run:
 ```shell
 $ docker run --rm -v ./otf-operator-mono:/in:Z -v ./otf-operator-mono-nerd:/out:Z nerdfonts/patcher --complete --progressbars
 $ docker run --rm -v ./otf-operator-mono-ssm:/in:Z -v ./otf-operator-mono-ssm-nerd:/out:Z nerdfonts/patcher --complete --progressbars
+$ docker run --rm -v ./ttf-samsung-sans:/in:Z -v ./ttf-samsung-sans-nerd:/out:Z nerdfonts/patcher --complete --progressbars
 ```

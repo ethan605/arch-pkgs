@@ -8,27 +8,27 @@ url="https://github.com/ethan605/arch-pkgs"
 license=('MIT')
 
 source=(
-  "OperatorMonoSSmNerdFont-Bold.otf"
-  "OperatorMonoSSmNerdFont-BoldItalic.otf"
-  "OperatorMonoSSmNerdFont-Italic.otf"
-  "OperatorMonoSSmNerdFont-Light.otf"
-  "OperatorMonoSSmNerdFont-LightItalic.otf"
-  "OperatorMonoSSmNerdFont-Medium.otf"
-  "OperatorMonoSSmNerdFont-MediumItalic.otf"
-  "OperatorMonoSSmNerdFont-Regular.otf"
+	"OperatorMonoSSmNerdFont-Bold.otf"
+	"OperatorMonoSSmNerdFont-BoldItalic.otf"
+	"OperatorMonoSSmNerdFont-Italic.otf"
+	"OperatorMonoSSmNerdFont-Light.otf"
+	"OperatorMonoSSmNerdFont-LightItalic.otf"
+	"OperatorMonoSSmNerdFont-Medium.otf"
+	"OperatorMonoSSmNerdFont-MediumItalic.otf"
+	"OperatorMonoSSmNerdFont-Regular.otf"
 )
 
 sha512sums=(
-  "a1683c37a9d8314f1efdb79ae3e36d6a51b2f71bef1f90e95c05e9a84cae49a27b0e9d19f8e39d128a7e550c68bb1559584c68d5a439229c80ef4f60a68e0174"
-  "96accb2a01a39ca7f88d2bb808cb1a81b00d872a2f1403bf54b93dad39f7a70a228050fd004f5c63e9ef83c05416948115b6f9f102471824df881ff35faa0f6d"
-  "ed984d0b0145ed8f00b54e4b7d1e1586d267084970503bd015fbdd70c0080bb8a4313982c9e84545043786af26494fcb07aff3a9f382d71ec397a2c597c80bfd"
-  "1f17debd4cc0abf4423d9390aa790bc1e1905a51765bdd1ade47619c2445a1c76e2f19dea1bfa54ea2e89f561efef3019c47e01d2f0311e8893e929d2791ad24"
-  "8fa7a2177ae5a121ab744d5afc5ff892a717d5c68b07df6d3b7b0475e0cb87bb1909eccf6a7ac711494302b611403e2d8fe9e4e11e735ab5e0dcff96ec8c66d6"
-  "5064d4ff7835d320299e2eeb7a6da7a9a12334df4714abf1f3dfb103acaf7ae754e0b1339e8acb56c5823df2f1369ab68ffac72a585a5fddd92851ffa9ba7870"
-  "90760aac61807b56fcc1125709ee27bc1a8c77bc075dad3b8916cb3181a7c6bc053f8b090ad2d1ea3e08f91ad23a9898e50a556c4722cbd3f70d968fc98617e9"
-  "64b3909758505b8186d93b617940e20a18ed8f18e36244ab81e1b5b0520d363714669a50ab95b035eb9a56864def9e16e83434298b9b837a2c90b668ad1d5cb3"
+	"a773b6a44012ba9aa3e5f899763b5a704ee034f0e6c4aebcbbdf337ce079504be72ceefd37a0b60c217f67e15f8d998adcbe6f177467d9bc76f99f3b545507fe"
+	"cd6804ab79e63892cb8ee4fe1eb7534e047384f8a1e1361f21129857ae759e03550568f93d198690ea8da9c53ba86d6c1d0a63152b33839569fbeb80cfb0ad9f"
+	"5779f9a433c84f9e33ac1054b62c3d17332da87ff529c7456fa6b754ddee3da4b2bcce354df9cac1182dc302303979a7a1219ca044d40d848230912f32bfbb8d"
+	"de0afb3e1e69f8d7f86f077e697d934f590059b91f3c61f28198ecb849fe9e151e9a711f436e2010b3ebc9862ae9e9c421ca88997bdb1bbf1988a0db70b24473"
+	"85b0b623ff951b799b96cb8a120e559b2d848998096ebfdb1036f83d1917fc54cf328da18afd7628ee42420fdf99b7f273336d9fa6409c17b161b8b0cec447b1"
+	"57a2c669e73bffae6be7fe84975bbd9922be08952d174980cff700fb9d38af673c5c7682546bbbf5ad505604e3744cc2f18efc246c4629e6793f91e56b30c3b2"
+	"cb22ddb5994b5a4295143e1f95511552f3a6c8b0aacf4f908fb624fcacaef7a205a08378d090344d6cf6042c9ceda58de87056415e9326bbc109138c738f219a"
+	"69d35c9c5c5ffe7bb90f43458ade5c00473d21b95a3cbb68e5c6de46c4a955d6a1908075a66d0e58982e2f062b4bf812f75b9a302f191147b43a9d39134fe136"
 )
 
 package() {
-  install -Dm644 -t "$pkgdir/usr/share/fonts/OTF" *.otf
+	install -Dm644 -t "$pkgdir/usr/share/fonts/OTF" *.otf
 }
